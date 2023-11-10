@@ -78,7 +78,7 @@
       >
     </a>
   </div>
-  <h1>Vite + Svelte + TS</h1>
+  <h1>Vite + Svelte + TypeScript</h1>
 
   <div class="card">
     <Counter />

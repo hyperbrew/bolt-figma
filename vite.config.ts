@@ -65,8 +65,10 @@ const figmaPlugin: () => Plugin = () => ({
         });
       });
     };
-    fs.mkdirSync("./dist", { recursive: true });
-    copyFilesRecursively("./.tmp", "./dist");
+    setTimeout(() => {
+      fs.mkdirSync("./dist", { recursive: true });
+      copyFilesRecursively("./.tmp", "./dist");
+    }, 100);
   },
 });
 
