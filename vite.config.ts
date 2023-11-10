@@ -65,11 +65,15 @@ const figmaPlugin: () => Plugin = () => ({
         });
       });
     };
-    copyFilesRecursively("./dist", "./dist-new");
+    fs.mkdirSync("./dist", { recursive: true });
+    copyFilesRecursively("./.tmp", "./dist");
   },
 });
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [svelte(), viteSingleFile(), figmaPlugin()],
+  build: {
+    outDir: ".tmp",
+  },
 });
