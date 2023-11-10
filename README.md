@@ -1,4 +1,23 @@
-# Svelte + TS + Vite
+# Bolt Figma
+
+_A lightning fast boilerplate for Figma plugins._
+
+`yarn`
+
+`yarn build`
+
+- Write your code in `src/code.ts`
+- Write everything else in `src/app.svelte`
+
+(below is just vite setup docs for now... 👇)
+
+---
+
+---
+
+---
+
+---
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
 
@@ -42,6 +61,6 @@ If you have state that's important to retain within a component, consider creati
 ```ts
 // store.ts
 // An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+import { writable } from "svelte/store";
+export default writable(0);
 ```
