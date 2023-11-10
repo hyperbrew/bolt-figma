@@ -1,0 +1,26 @@
+{
+  "name": "bolt-figma",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "_build": "rimraf dist/* && tsc ./src/code.ts --outDir ./dist && vite build",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.31.0",
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@tsconfig/svelte": "^5.0.0",
+    "@types/node": "^16.7.1",
+    "rimraf": "^3.0.2",
+    "svelte": "^4.0.5",
+    "svelte-check": "^3.4.6",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-singlefile": "^0.13.5"
+  }
+}
