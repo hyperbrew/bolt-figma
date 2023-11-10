@@ -19,10 +19,6 @@ figma.ui.onmessage = async (msg: Message) => {
 
   if (msg.func === "myCustomMessage") {
     // Do Stuff
-  } else if (msg.func === "reload") {
-    // figma.closePlugin();
-    figma.ui.close();
-    figma.showUI(__html__, { width: 550, height: 600 });
   }
 
   if (msg.callback) {
