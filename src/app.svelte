@@ -2,6 +2,19 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
+
+  export const post = (msg: Message) => {
+    parent.postMessage({ pluginMessage: msg }, "*");
+  };
+
+  const reload = () => {
+    post({
+      func: "reload",
+      callback: "",
+    });
+  };
+
+
 </script>
 
 <main>
@@ -18,6 +31,8 @@
   <div class="card">
     <Counter />
   </div>
+
+  <button on:click={reload}>Reload</button>
 
   <p>
     Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
