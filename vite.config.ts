@@ -8,22 +8,22 @@ import path from "path";
 
 const figmaPlugin: () => Plugin = () => ({
   name: "vite-figma-plugin",
-  generateBundle() {
-    try {
-      const res = execSync("yarn tsc ./src/code.ts", {
-        encoding: "utf-8",
-      });
-      console.log(res.toString());
-    } catch (e) {
-      // console.log(e);
-    }
-    const code = readFileSync("./src/code.js", "utf-8");
-    this.emitFile({
-      type: "asset",
-      fileName: "code.js",
-      source: code,
-    });
-  },
+  // generateBundle() {
+  //   try {
+  //     const res = execSync("yarn tsc ./src/code.ts", {
+  //       encoding: "utf-8",
+  //     });
+  //     console.log(res.toString());
+  //   } catch (e) {
+  //     // console.log(e);
+  //   }
+  //   const code = readFileSync("./src/code.js", "utf-8");
+  //   this.emitFile({
+  //     type: "asset",
+  //     fileName: "code.js",
+  //     source: code,
+  //   });
+  // },
   writeBundle() {
     const copyFilesRecursively = (srcDir, destDir) => {
       fs.readdir(srcDir, { withFileTypes: true }, (err, items) => {
@@ -76,6 +76,7 @@ const figmaPlugin: () => Plugin = () => ({
 export default defineConfig({
   plugins: [svelte(), viteSingleFile(), figmaPlugin()],
   build: {
+    emptyOutDir: false,
     outDir: ".tmp",
   },
 });

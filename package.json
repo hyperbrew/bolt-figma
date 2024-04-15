@@ -4,10 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite build --watch",
     "_build": "rimraf dist/* && tsc ./src/code.ts --outDir ./dist && vite build",
-    "build": "vite build",
+    "build": "rimraf dist/* && rimraf .tmp/* && yarn buildcode && yarn buildmain",
+    "buildmain": "vite build",
+    "buildcode": "vite build --config vite.config.code.ts",
     "preview": "vite preview",
+    "hmr": "vite",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
