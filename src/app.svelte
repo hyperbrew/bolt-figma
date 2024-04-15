@@ -33,10 +33,8 @@
             x2="57.636%"
             y1="7.652%"
             y2="78.411%"
-            ><stop offset="0%" stop-color="#41D1FF" /><stop
-              offset="100%"
-              stop-color="#BD34FE"
-            /></linearGradient
+            ><stop offset="0%" stop-color="#41D1FF" />
+            <stop offset="100%" stop-color="#BD34FE" /></linearGradient
           ><linearGradient
             id="IconifyId1813088fe1fbc01fb467"
             x1="43.376%"

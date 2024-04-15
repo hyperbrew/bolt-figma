@@ -19,6 +19,7 @@ figma.ui.onmessage = async (msg: Message) => {
 
   if (msg.func === "myCustomMessage") {
     // Do Stuff
+    console.log("do");
   }
 
   if (msg.callback) {

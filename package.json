@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
+    "devcode": "vite build --watch --config vite.config.code.ts ",
+    "build": "vite build",
+    "_dev": "vite build --watch",
     "_build": "rimraf dist/* && tsc ./src/code.ts --outDir ./dist && vite build",
-    "build": "rimraf dist/* && rimraf .tmp/* && yarn buildcode && yarn buildmain",
+    "__build": "rimraf dist/* && rimraf .tmp/* && vite build && vite build --config vite.config.code.ts",
     "buildmain": "vite build",
     "buildcode": "vite build --config vite.config.code.ts",
     "preview": "vite preview",

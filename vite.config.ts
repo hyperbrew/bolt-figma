@@ -1,29 +1,79 @@
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { viteSingleFile } from "vite-plugin-singlefile";
-import { execSync } from "child_process";
+import { execSync, exec, spawn } from "child_process";
 import type { Plugin } from "vite";
 import fs, { copyFile, readFileSync, readdir } from "fs";
 import path from "path";
 
+const buildCode = (runner: string, exe: string) => {
+  const res = execSync(`${runner} buildcode`, {
+    encoding: "utf-8",
+  });
+  console.log(res.toString());
+};
+
+const devCode = (runner: string, exe: string) => {
+  console.log("devCode");
+  exec(`${runner} devcode`, (err, stdout, stderr) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(stdout);
+  });
+
+  // spawn equivalent
+
+  // const child = spawn(runner, ["buildcode", "--watch"]);
+  // child.stdout.on("data", (data) => {
+  //   console.log(`stdout: ${data}`);
+  // });
+};
+
+const startCodeWatcher = () => {
+  console.log("buildStart");
+  const exe = process.argv[1];
+  const scriptMode = process.argv[3];
+  const isDevMode = scriptMode === "--watch";
+  console.log({ isDevMode, scriptMode });
+  // if (isDevMode) {
+  //   fs.watchFile("./.tmp/code.js", () => {
+  //     console.log("code.ts changed");
+  //     // this.generateBundle();
+  //   });
+  // }
+  const runner = process.env.npm_config_user_agent.split("/")[0];
+  const supportedRunners = ["npm", "yarn", "pnpm"];
+  if (supportedRunners.indexOf(runner) === -1) {
+    console.warn(`⚠️ Unsupported runner. May encounter issues: ${runner}`);
+  }
+  // return;
+  try {
+    buildCode(runner, exe);
+    if (isDevMode) {
+      devCode(runner, exe);
+    }
+  } catch (e) {
+    console.log(e);
+  }
+};
+startCodeWatcher();
+
 const figmaPlugin: () => Plugin = () => ({
   name: "vite-figma-plugin",
-  // generateBundle() {
-  //   try {
-  //     const res = execSync("yarn tsc ./src/code.ts", {
-  //       encoding: "utf-8",
-  //     });
-  //     console.log(res.toString());
-  //   } catch (e) {
-  //     // console.log(e);
-  //   }
-  //   const code = readFileSync("./src/code.js", "utf-8");
-  //   this.emitFile({
-  //     type: "asset",
-  //     fileName: "code.js",
-  //     source: code,
-  //   });
-  // },
+  buildStart() {
+    // this.addWatchFile("src-code/code.ts");
+  },
+  // async
+  generateBundle() {
+    // const code = readFileSync("./src/code.js", "utf-8");
+    // this.emitFile({
+    //   type: "asset",
+    //   fileName: "code.js",
+    //   source: code,
+    // });
+  },
   writeBundle() {
     const copyFilesRecursively = (srcDir, destDir) => {
       fs.readdir(srcDir, { withFileTypes: true }, (err, items) => {
@@ -66,6 +116,7 @@ const figmaPlugin: () => Plugin = () => ({
       });
     };
     setTimeout(() => {
+      // fs.rmSync("./dist", { recursive: true });
       fs.mkdirSync("./dist", { recursive: true });
       copyFilesRecursively("./.tmp", "./dist");
     }, 100);
