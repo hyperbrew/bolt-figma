@@ -45,9 +45,11 @@ startCodeWatcher();
 
 const triggerFigmaRefresh = (file: string) => {
   if (process.platform === "win32") {
+    // Figma on Windows refresh isn't reliable without this
     execSync(`echo.>> ${file}`);
   } else if (process.platform === "darwin") {
-    execSync(`touch ${file}`);
+    // Figma on Mac doesn't seem to need this for now
+    // execSync(`touch ${file}`);
   }
 
   // const time = new Date();
