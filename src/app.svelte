@@ -5,9 +5,9 @@
     parent.postMessage({ pluginMessage: msg }, "*");
   };
 
-  const reload = () => {
+  const closePlugin = () => {
     post({
-      func: "reload",
+      func: "close",
       callback: "",
     });
   };
@@ -80,6 +80,7 @@
 
   <div class="card">
     <Counter />
+    <button on:click={closePlugin}>Close</button>
   </div>
   <p>
     Check out <a

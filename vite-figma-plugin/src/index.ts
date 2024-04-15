@@ -1,6 +1,3 @@
-import { defineConfig } from "vite";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
-import { viteSingleFile } from "vite-plugin-singlefile";
 import { execSync, exec } from "child_process";
 import type { Plugin } from "vite";
 import * as fs from "fs";
@@ -51,42 +48,6 @@ const triggerFigmaRefresh = (file: string) => {
     // Figma on Mac doesn't seem to need this for now
     // execSync(`touch ${file}`);
   }
-
-  // const time = new Date();
-  // const indexHtml = path.join(file);
-
-  // const txt = fs.readFileSync(indexHtml, { encoding: "utf-8" });
-  // // fs.unlinkSync(indexHtml);
-  // fs.writeFileSync(indexHtml, `<!-- updated at ${time.valueOf()}-->\n${txt}`, {
-  //   encoding: "utf-8",
-  // });
-
-  // function getRandomDate(start = new Date(1970, 0, 1), end = new Date()) {
-  //   const startDate = start.getTime();
-  //   const endDate = end.getTime();
-  //   const randomTime = startDate + Math.random() * (endDate - startDate);
-  //   return new Date(randomTime);
-  // }
-
-  // Example usage:
-  // const time = getRandomDate();
-
-  // FORCE TIMESTAMP UPDATES
-  // try {
-  //   fs.utimes(indexHtml, new Date(), new Date(), (err) => {
-  //     if (err) throw err;
-  //     console.log("Timestamps u updated!");
-  //   });
-  //   fs.lutimes(indexHtml, new Date(), new Date(), (err) => {
-  //     if (err) throw err;
-  //     console.log("Timestamps l updated!");
-  //   });
-  //   // fs.utimesSync(indexHtml, time, time);
-  //   // fs.lutimesSync(indexHtml, time, time);
-  //   // fs.futimesSync(fs.openSync(indexHtml, "r"), time, time);
-  // } catch (err) {
-  //   fs.closeSync(fs.openSync(indexHtml, "w"));
-  // }
 };
 
 const copyFilesRecursively = (srcDir, destDir) => {
@@ -118,12 +79,11 @@ const copyFilesRecursively = (srcDir, destDir) => {
           }
         }
         // Copy file to the destination directory
-        const res = fs.copyFileSync(srcPath, destPath);
+        fs.copyFileSync(srcPath, destPath);
         console.log(`Copied ${srcPath} to ${destPath}`);
       }
     });
     triggerFigmaRefresh(path.join(destDir, "index.html"));
-    console.log("TRIGGER HTML");
   });
 };
 
@@ -131,7 +91,6 @@ export const figmaPlugin: () => Plugin = () => ({
   name: "vite-figma-plugin",
   writeBundle() {
     setTimeout(() => {
-      // fs.rmSync("./dist", { recursive: true });
       fs.mkdirSync("./dist", { recursive: true });
       copyFilesRecursively("./.tmp", "./dist");
     }, 100);
