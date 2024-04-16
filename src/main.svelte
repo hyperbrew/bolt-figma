@@ -17,27 +17,34 @@
   };
 
   let count: number = 0;
-  const increment = () => {
-    count += 1;
-  };
+  const increment = () => (count += 1);
 </script>
 
 <main>
-  <a
-    href="https://github.com/hyperbrew/bolt-figma/"
-    target="_blank"
-    rel="noreferrer"
+  <a href="https://github.com/hyperbrew/bolt-figma/" target="_blank"
     >{@html boltIcon}
   </a>
   <div class="stack-icons">
-    <a href="https://vitejs.dev" target="_blank">{@html viteIcon} </a>
-    <a href="https://svelte.dev" target="_blank"> {@html svelteIcon} </a>
+    <a href="https://vitejs.dev" target="_blank"
+      >{@html viteIcon}
+      <span>Vite</span>
+    </a>
+    +
+    <a href="https://svelte.dev" target="_blank">
+      {@html svelteIcon}
+      <span> Svelte </span>
+    </a>
+    +
     <a href="https://www.typescriptlang.org/" target="_blank">
       {@html typescriptIcon}
+      <span> TypeScript </span>
     </a>
-    <a href="https://sass-lang.com/" target="_blank"> {@html sassIcon} </a>
+    +
+    <a href="https://sass-lang.com/" target="_blank">
+      {@html sassIcon}
+      <span> Sass </span>
+    </a>
   </div>
-  <h1>Vite + Svelte + TypeScript</h1>
 
   <div class="card">
     <button on:click={increment}>
@@ -45,6 +52,10 @@
     </button>
     <button on:click={helloWorld}>Hello World</button>
   </div>
+  <p>
+    Edit
+    <code>main.svelte</code> and save to use Hot Reloading.
+  </p>
 </main>
 
 <style>
