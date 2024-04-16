@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -31,11 +33,6 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 .card {
   padding: 2em;
 }
@@ -64,6 +61,40 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+a {
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.25s;
+}
+a:hover {
+  border-color: #646cff;
+}
+
+.stack-icons {
+  color: $font;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    span {
+      font-size: 0.75rem;
+      color: $font;
+    }
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
 
 @media (prefers-color-scheme: light) {

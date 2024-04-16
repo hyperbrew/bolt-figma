@@ -1,3 +1,5 @@
+import { myFunction } from "./lib";
+
 figma.showUI(__html__, { width: 550, height: 600 });
 
 figma.currentPage.children;
@@ -19,6 +21,7 @@ figma.ui.onmessage = async (msg: Message) => {
 
   if (msg.func === "myCustomMessage") {
     // Do Stuff
+    console.log("do");
   }
 
   if (msg.callback) {
@@ -30,5 +33,8 @@ figma.ui.onmessage = async (msg: Message) => {
 
   if (msg.func === "close") {
     figma.closePlugin();
+  }
+  if (msg.func === "helloWorld") {
+    myFunction();
   }
 };

@@ -10,8 +10,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
-    "devcode": "vite build --watch --config vite.config.code.ts ",
     "build": "vite build",
+    "devcode": "vite build --watch --config vite.config.code.ts ",
     "buildcode": "vite build --config vite.config.code.ts",
     "preview": "vite preview",
     "hmr": "vite",
@@ -30,22 +30,5 @@
     "vite-figma-plugin": "^0.0.2",
     "vite-plugin-singlefile": "^0.13.5"
   },
-  "dependencies": {},
-  "files": [
-    "index.html",
-    "package.json",
-    "package.react.json",
-    "package.svelte.json",
-    "package.vue.json",
-    "public/**/*",
-    "README.md",
-    "src/**/*",
-    "src-code/**/*",
-    "tsconfig.json",
-    "figma.config.ts",
-    "vite.config.ts",
-    "vite.config.code.ts",
-    "yarn.lock",
-    ".gitignore"
-  ]
+  "dependencies": {}
 }
