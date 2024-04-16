@@ -45,13 +45,6 @@ If your team is interested in paid consulting or development with Bolt Figma, pl
 - [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) ( ensure by running `yarn set version classic` )
 - Figma Desktop App
 
-`yarn`
-
-`yarn build`
-
-- Write your code in `src/code.ts`
-- Write everything else in `src/app.svelte`
-
 ## Quick Start
 
 `yarn` - Install Dependencies (if not already done by create command)
@@ -59,6 +52,10 @@ If your team is interested in paid consulting or development with Bolt Figma, pl
 `yarn build` - Build the plugin (must run before `yarn dev`, can also run after for panel to work statically without the process)
 
 `yarn dev` - Run the plugin in hot reload mode for development with UDT (see below)
+
+Write frontend UI code in `src/main.svelte`
+
+Write backend figma code in `src-code/code.ts`
 
 ### Add Plugin to Figma
 
@@ -72,3 +69,27 @@ If your team is interested in paid consulting or development with Bolt Figma, pl
 1. Launch your plugin by going to `Figma Menu > Plugins > Development > "Your Plugin"`
 2. Ensure Hot Reloading is checked under `Figma Menu > Plugins > Development > Hot Reloading Plugin`
 3. Open the Dev Tools console with `Figma Menu > Plugins > Development > Show/Hide Console`
+
+### Info on Build Process
+
+Frontend code is built to the `.tmp` directory temporarily and then copied to the `dist` folder for final. This is done to avoid Figma throwing plugin errors with editing files directly in the `dist` folder.
+
+The frontend code (JS, CSS, HTML) is bundled into a single `index.html` file.
+
+The backend code is bundled into a single `code.js` file.
+
+Finally the `manifest.json` is copied from the public folder as is.
+
+### Troubleshooting Assets
+
+Figma requires the entire frontend code to be wrapped into a single HTML file. For this reason, bundling external images, svgs, and other assets is not possible. The solution to this is to import assets as raw strings in Vite with the `?raw` suffix. For example:
+
+```ts
+import svelteIcon from "./assets/svelte.svg?raw";
+```
+
+and then use that data inline in your component:
+
+```svelte
+{@html svelteIcon}
+```
