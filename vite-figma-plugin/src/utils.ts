@@ -40,7 +40,7 @@ export const copyFilesRecursively = (srcDir, destDir) => {
         }
         // Copy file to the destination directory
         fs.copyFileSync(srcPath, destPath);
-        console.log(`Copied ${srcPath} to ${destPath}`);
+        // console.log(`Copied ${srcPath} to ${destPath}`);
       }
     });
     triggerFigmaRefresh(path.join(destDir, "index.html"));
