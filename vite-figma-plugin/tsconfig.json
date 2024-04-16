@@ -8,6 +8,6 @@
     "allowJs": true,
     "noImplicitAny": false
   },
-  "include": ["src"],
+  "include": ["src", "src-code"],
   "exclude": ["node_modules"]
 }

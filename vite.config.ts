@@ -1,7 +1,9 @@
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { viteSingleFile } from "vite-plugin-singlefile";
-import { figmaPlugin } from "vite-figma-plugin";
+import { figmaPlugin, figmaPluginInit } from "vite-figma-plugin";
+
+figmaPluginInit();
 
 // https://vitejs.dev/config/
 export default defineConfig({

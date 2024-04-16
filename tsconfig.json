@@ -1,9 +1,9 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "es6",
     "useDefineForClassFields": true,
-    "module": "ESNext",
+    "module": "es6",
     "resolveJsonModule": true,
     /**
      * Typecheck JS in `.svelte` and `.js` files by default.
@@ -25,7 +25,7 @@
     "src/**/*.ts",
     "src/**/*.js",
     "src/**/*.svelte",
-    "src-code/code.ts"
+    "src-code/**/*.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
