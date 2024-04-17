@@ -3,6 +3,7 @@ import * as fs from "fs";
 import { copyFilesRecursively, emptyFolder, startCodeWatcher } from "./utils";
 
 export const figmaPluginInit = () => {
+  fs.mkdirSync("./.tmp", { recursive: true });
   emptyFolder("./.tmp");
   startCodeWatcher();
 };
