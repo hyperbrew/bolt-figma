@@ -25,3 +25,7 @@ dist-ssr
 
 src/code.js
 .tmp
+/**/.test
+/**/.test1
+/**/.test2
+/**/.test3

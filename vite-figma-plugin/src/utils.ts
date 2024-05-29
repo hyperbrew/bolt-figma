@@ -48,6 +48,7 @@ export const copyFilesRecursively = (srcDir, destDir) => {
 };
 
 export const emptyFolder = (folder: string) => {
+  if (!fs.existsSync(folder)) return;
   fs.readdirSync(folder).forEach((file) => {
     const curPath = folder + "/" + file;
     if (fs.lstatSync(curPath).isDirectory()) {

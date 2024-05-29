@@ -1,26 +1,8 @@
 process.env.BOLT_MODULEONLY = "true";
-import { BoltInitData, main } from "bolt-template/dist/index-simple";
+import { main } from "meta-bolt";
+import type { BoltInitData, ArgOpt } from "meta-bolt";
 
-export const globalIncludes: string[] = [
-  "*",
-  "src/**/*",
-  "public/**/*",
-  "public-zip/**/*",
-  ".github/**/*",
-  ".gitignore",
-  ".env.example",
-];
-export const globalExcludes: string[] = [".env", "yarn-error.log"];
-
-export const hybridFiles: string[] = ["public-hybrid/**/*", "scripts/**/*"];
-
-export type Opt = {
-  value: string;
-  label: string;
-  files: string[];
-};
-
-export const frameworkOptions: Opt[] = [
+export const frameworkOptions: ArgOpt[] = [
   {
     value: "svelte",
     label: "Svelte",
@@ -37,14 +19,11 @@ export const frameworkOptions: Opt[] = [
     files: ["src/index-vue.ts", "src/main.vue", "package.vue.json"],
   },
 ];
-export const frameworkValues = frameworkOptions.map((f) => f.value);
 
-export const appOptions: Opt[] = [
+export const appOptions: ArgOpt[] = [
   { value: "figma", label: "Figma", files: ["src/api/figma.ts"] },
   { value: "figjam", label: "Figjam", files: ["src/api/figjam.ts"] },
 ];
-
-export const appValues = appOptions.map((f) => f.value);
 
 const initData: BoltInitData = {
   intro: {
@@ -53,8 +32,17 @@ const initData: BoltInitData = {
   },
   base: {
     module: "bolt-figma",
-    globalIncludes,
-    globalExcludes,
+    globalIncludes: [
+      "*",
+      "src/**/*",
+      "src-code/**/*",
+      "public/**/*",
+      "public-zip/**/*",
+      ".github/**/*",
+      ".gitignore",
+      ".env.example",
+    ],
+    globalExcludes: [".env", "yarn-error.log"],
   },
   argsTemplate: [
     {
@@ -133,4 +121,4 @@ const initData: BoltInitData = {
 
 process.env.BOLT_MODULEONLY = "true";
 
-main(initData, {});
+main(initData);

@@ -32,6 +32,20 @@
   },
   "dependencies": {},
   "files": [
-    "temp.txt"
+    "index.html",
+    "package.json",
+    "package.react.json",
+    "package.svelte.json",
+    "package.vue.json",
+    "public/**/*",
+    "public-zip/**/*",
+    "README.md",
+    "src/**/*",
+    "src-code/**/*",
+    "tsconfig.json",
+    "figma.config.ts",
+    "vite.config.ts",
+    "yarn.lock",
+    ".gitignore"
   ]
 }
