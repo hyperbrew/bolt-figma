@@ -108,7 +108,7 @@ const initData: BoltInitData = {
       describe: "Install dependencies (default: false)",
     },
     {
-      name: "keepSampleCode",
+      name: "sampleCode",
       type: "boolean",
       message: "Keep Sample Code Snippets?",
       initialValue: true,

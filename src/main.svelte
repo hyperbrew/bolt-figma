@@ -1,14 +1,17 @@
 <script lang="ts">
+  // BOLT_SAMPLECODE_START
   import boltIcon from "./assets/bolt-figma-light.svg?raw";
   import viteIcon from "./assets/vite.svg?raw";
   import svelteIcon from "./assets/svelte.svg?raw";
   import typescriptIcon from "./assets/typescript.svg?raw";
   import sassIcon from "./assets/sass.svg?raw";
+  // BOLT_SAMPLECODE_END
 
   export const post = (msg: Message) => {
     parent.postMessage({ pluginMessage: msg }, "*");
   };
 
+  // BOLT_SAMPLECODE_START
   const helloWorld = () => {
     post({
       func: "helloWorld",
@@ -18,9 +21,11 @@
 
   let count: number = 0;
   const increment = () => (count += 1);
+  // BOLT_SAMPLECODE_END
 </script>
 
 <main>
+  <!-- BOLT_SAMPLECODE_START -->
   <a href="https://github.com/hyperbrew/bolt-figma/" target="_blank"
     >{@html boltIcon}
   </a>
@@ -56,6 +61,7 @@
     Edit
     <code>main.svelte</code> and save to use Hot Reloading.
   </p>
+  <!-- BOLT_SAMPLECODE_END -->
 </main>
 
 <style>
