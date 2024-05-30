@@ -26,12 +26,16 @@ Huge thanks to our backers who have made this project possible!
 
 ### Founding Backers
 
+_Founding backers have made substantial contribution to the project at the start which has made this project possible._
+
 <a href="https://figma.com/" target="_blank">
-<img src="https://cdn.sanity.io/images/g3so7nt7/production/6cb43009e94a67554c68fb50b9363a0aa68f3d23-418x200.png?w=1000&h=1000&fit=max" alt="Figma" title="Figma" width="400" /></a>
+<img src="https://cdn.sanity.io/images/g3so7nt7/production/6cb43009e94a67554c68fb50b9363a0aa68f3d23-418x200.png?w=1000&h=1000&fit=max" alt="Figma" title="Figma" width="300" /></a>
 
 ...
 
 ### Feature Backers
+
+_Feature backers have sponsored individual features that have made this project better for the whole community._
 
 <a href="https://battleaxe.co/" target="_blank">
 <img src="https://battleaxe.dev/servile/logotype_lightgrey.png" alt="Battle Axe" title="Battle Axe" width="150" /></a>
