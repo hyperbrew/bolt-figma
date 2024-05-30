@@ -6,7 +6,8 @@
     "outDir": "./lib",
     "strict": true,
     "allowJs": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "skipLibCheck": true
   },
   "include": ["src", "src-code"],
   "exclude": ["node_modules"]

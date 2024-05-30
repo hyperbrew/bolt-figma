@@ -15,7 +15,9 @@
     "buildcode": "vite build --config vite.config.code.ts",
     "preview": "vite preview",
     "hmr": "vite",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "dep": "cross-env ACTION=dependencyCheck vite",
+    "example": "cross-env ACTION=example vite"
   },
   "devDependencies": {
     "@figma/plugin-typings": "^1.31.0",
@@ -35,6 +37,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
     "@vitejs/plugin-vue": "^5.0.4",
+    "cross-env": "^7.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "vue": "^3.4.27"

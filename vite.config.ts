@@ -1,11 +1,20 @@
 import { defineConfig } from "vite";
 import { sveltePreprocess } from "svelte-preprocess/dist/autoProcess"; // BOLT_SVELTE_ONLY
 import { viteSingleFile } from "vite-plugin-singlefile";
-import { figmaPlugin, figmaPluginInit } from "vite-figma-plugin";
+import { figmaPlugin, figmaPluginInit, runAction } from "vite-figma-plugin";
 
 import { svelte } from "@sveltejs/vite-plugin-svelte"; // BOLT_SVELTE_ONLY
 import react from "@vitejs/plugin-react"; // BOLT_REACT_ONLY
 import vue from "@vitejs/plugin-vue"; // BOLT_VUE_ONLY
+
+const action = process.env.ACTION;
+if (action) {
+  runAction(
+    {},
+    // config
+    action
+  );
+}
 
 figmaPluginInit();
 
