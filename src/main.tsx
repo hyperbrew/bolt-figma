@@ -24,7 +24,6 @@ export const App = () => {
     });
   };
   // BOLT_SAMPLECODE_END
-  console.log({ boltIcon });
   return (
     <>
       <main>
