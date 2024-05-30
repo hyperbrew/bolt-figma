@@ -1,4 +1,4 @@
-<img src="src/assets/bolt-figma-light.svg" alt="Bolt UXP" title="Bolt UXP" width="400" />
+<img src="src/assets/bolt-figma-darkmode.svg" alt="Bolt Figma" title="Bolt Figma" width="400" />
 
 A lightning-fast boilerplate for building Figma Plugins in Svelte, React, or Vue built on Vite + TypeScript + Sass
 
@@ -12,11 +12,11 @@ A lightning-fast boilerplate for building Figma Plugins in Svelte, React, or Vue
 - Setup with TypeScript Definitions for Figma in UI and Code Contexts
 - Optimized Build Size
 - Bundling in UI and Code contexts
+- Spin a up a new project in Svete, React, or Vue
+- Easily configure in figma.config.ts
 
-Pending Features:
+#### Pending Features:
 
-- Spin a up a new project in Svete, React, or Vue (pending, Svelte-only for now)
-- Easily configure in figma.config.ts (pending)
 - Easy Package to ZIP archive with sidecar assets (pending)
 - GitHub Actions ready-to-go for zip Releases (pending)
 
@@ -24,8 +24,19 @@ Pending Features:
 
 Huge thanks to our backers who have made this project possible!
 
+### Founding Backers
+
+<a href="https://figma.com/" target="_blank">
+<img src="https://cdn.sanity.io/images/g3so7nt7/production/6cb43009e94a67554c68fb50b9363a0aa68f3d23-418x200.png?w=1000&h=1000&fit=max" alt="Figma" title="Figma" width="400" /></a>
+
+...
+
+### Feature Backers
+
 <a href="https://battleaxe.co/" target="_blank">
-<img src="https://battleaxe.dev/servile/logotype_lightgrey.png" alt="Battle Axe" title="Battle Axe" width="200" /></a>
+<img src="https://battleaxe.dev/servile/logotype_lightgrey.png" alt="Battle Axe" title="Battle Axe" width="150" /></a>
+
+...
 
 If you're interested in supporting this open-source project, please [contact the Hyper Brew team](https://hyperbrew.co/contact/).
 
@@ -33,7 +44,7 @@ If you're interested in supporting this open-source project, please [contact the
 
 ### Free Support
 
-If you have questions with getting started using Bolt UXP, feel free to ask and discuss in our free Discord community [Discord Community](https://discord.gg/PC3EvvuRbc).
+If you have questions with getting started using Bolt Figma, feel free to ask and discuss in our free Discord community [Discord Community](https://discord.gg/PC3EvvuRbc).
 
 ### Paid Support
 
@@ -46,6 +57,10 @@ If your team is interested in paid consulting or development with Bolt Figma, pl
 - Figma Desktop App
 
 ## Quick Start
+
+`yarn create bolt-figma` - Create a new plugin with the create script
+
+`cd my-plugin` - Change to the new plugin directory
 
 `yarn` - Install Dependencies (if not already done by create command)
 
@@ -82,14 +97,29 @@ Finally the `manifest.json` is copied from the public folder as is.
 
 ### Troubleshooting Assets
 
-Figma requires the entire frontend code to be wrapped into a single HTML file. For this reason, bundling external images, svgs, and other assets is not possible. The solution to this is to import assets as raw strings in Vite with the `?raw` suffix. For example:
+Figma requires the entire frontend code to be wrapped into a single HTML file. For this reason, bundling external images, svgs, and other assets is not possible.
+
+The solution to this is to inline all assets. Vite is already setup to inline most asset types it understands such as JPG, PNG, SVG, and more, however if the file type you're trying to inline doesn't work, you may need to add it to the assetsInclude array in the vite config:
+
+More Info: https://vitejs.dev/config/shared-options.html#assetsinclude
+
+Additionally, you may be able to import the file as a raw string, and then use that data inline in your component using the `?raw` suffix.
+
+For example:
 
 ```ts
-import svelteIcon from "./assets/svelte.svg?raw";
+import icon from "./assets/icon.svg?raw";
 ```
 
 and then use that data inline in your component:
 
-```svelte
-{@html svelteIcon}
+```js
+// Svelte
+{@html icon}
+
+// React
+<div dangerouslySetInnerHTML={{ __html: icon }}></div>
+
+// Vue
+<div v-html="icon"></div>
 ```
