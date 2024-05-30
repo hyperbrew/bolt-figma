@@ -331,10 +331,10 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.20.2.tgz#9c907b21e30a52db959ba4f80bb01a0cc403d5cc"
   integrity sha512-N49X4lJX27+l9jbLKSqZ6bKNjzQvHaT8IIFUy+YIqmXQdjYCToGWwOItDrfby14c78aDd5NHQl29xingXfCdLQ==
 
-"@figma/plugin-typings@^1.31.0":
-  version "1.81.0"
-  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.81.0.tgz#ef1c83795bd965c532b40c1345d657a5742caa82"
-  integrity sha512-gy/q4Aa/oVmN9PxdrUyuiMpoBpXAkGIpbe4nqHiKK1TDjrxW3ZBwmYzCM3uGUTC63xhwk99vExbBxaHsoSrAGw==
+"@figma/plugin-typings@^1.94.0":
+  version "1.94.0"
+  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.94.0.tgz#ae4efdb9d45bc518a2c01c2c1e55da46c85d4fca"
+  integrity sha512-1Qm3iXs/cvNx99Ge46jUnZtcJV7/VJP96yGVSFIfc+wIp+CGbwByksBVQdLX+sFt6a5dQVAHINbY3daBSitWkw==
 
 "@jridgewell/gen-mapping@^0.3.0":
   version "0.3.3"

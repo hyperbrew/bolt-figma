@@ -7,6 +7,7 @@ import {
   emptyFolder,
   copyFilesRecursively,
 } from "meta-bolt/dist/plugin-utils";
+import { FigmaConfig } from "./types";
 
 const tmp = "./.tmp";
 const dist = "./dist";
@@ -18,7 +19,9 @@ export const figmaPluginInit = () => {
   startCodeWatcher();
 };
 
-export const figmaPlugin: () => Plugin = () => ({
+export const figmaPlugin: (config: FigmaConfig) => Plugin = (
+  config: FigmaConfig
+) => ({
   name: "vite-figma-plugin",
   writeBundle() {
     setTimeout(() => {
@@ -27,6 +30,11 @@ export const figmaPlugin: () => Plugin = () => ({
       } else {
         fs.mkdirSync(dist, { recursive: true });
       }
+      //* write manifest
+      fs.writeFileSync(
+        path.join(dist, "manifest.json"),
+        JSON.stringify(config.manifest, null, 2)
+      );
       copyFilesRecursively(tmp, dist, () => {
         triggerFigmaRefresh(path.join(dist, index));
       });

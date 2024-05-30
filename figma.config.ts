@@ -1,4 +1,6 @@
-const manifest = {
+import type { FigmaConfig, PluginManifest } from "vite-figma-plugin/lib/types";
+
+const manifest: PluginManifest = {
   name: "Bolt Figma", // BOLT_DISPLAYNAME_REPLACE
   id: "co.bolt.figma", // BOLT_ID_REPLACE
   api: "1.0.0",
@@ -8,4 +10,17 @@ const manifest = {
     "figma", // BOLT_FIGMA_ONLY
     "figjam", // BOLT_FIGJAM_ONLY
   ],
+  networkAccess: {
+    allowedDomains: ["*"],
+    reasoning: "For accessing remote assets",
+  },
+};
+
+const extraPrefs = {
+  copyZipAssets: ["public-zip/*"],
+};
+
+export const config: FigmaConfig = {
+  manifest,
+  ...extraPrefs,
 };

@@ -20,7 +20,7 @@
     "example": "cross-env ACTION=example vite"
   },
   "devDependencies": {
-    "@figma/plugin-typings": "^1.31.0",
+    "@figma/plugin-typings": "^1.94.0",
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "@tsconfig/svelte": "^5.0.0",
     "@types/node": "^16.7.1",

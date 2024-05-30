@@ -7,6 +7,8 @@ import { svelte } from "@sveltejs/vite-plugin-svelte"; // BOLT_SVELTE_ONLY
 import react from "@vitejs/plugin-react"; // BOLT_REACT_ONLY
 import vue from "@vitejs/plugin-vue"; // BOLT_VUE_ONLY
 
+import { config } from "./figma.config";
+
 const action = process.env.ACTION;
 if (action) {
   runAction(
@@ -25,7 +27,7 @@ export default defineConfig({
     vue(), // BOLT_VUE_ONLY
     svelte({ preprocess: sveltePreprocess({ typescript: true }) }), // BOLT_SVELTE_ONLY
     viteSingleFile(),
-    figmaPlugin(),
+    figmaPlugin(config),
   ],
   build: {
     assetsInlineLimit: Infinity,

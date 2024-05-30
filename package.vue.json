@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
-    "@figma/plugin-typings": "^1.31.0",
+    "@figma/plugin-typings": "^1.94.0",
     "@types/node": "^16.7.1",
     "sass": "^1.75.0",
     "typescript": "^5.0.2",
