@@ -1,10 +1,13 @@
 <script lang="ts">
   // BOLT_SAMPLECODE_START
-  import boltIcon from "./assets/bolt-figma-light.svg";
+  import boltIconLight from "./assets/bolt-figma-lightmode.svg";
+  import boltIconDark from "./assets/bolt-figma-darkmode.svg";
   import viteIcon from "./assets/vite.svg";
   import svelteIcon from "./assets/svelte.svg";
   import typescriptIcon from "./assets/typescript.svg";
   import sassIcon from "./assets/sass.svg";
+  import { getColorTheme, subscribeColorTheme } from "./utils/utils";
+  import { onMount } from "svelte";
   // BOLT_SAMPLECODE_END
 
   const post = (msg: Message) => {
@@ -13,6 +16,7 @@
 
   // BOLT_SAMPLECODE_START
   let count: number = 0;
+  let lightOrDarkMode = getColorTheme();
   const increment = () => (count += 1);
 
   const helloWorld = () => {
@@ -21,6 +25,11 @@
       callback: "",
     });
   };
+  onMount(() => {
+    subscribeColorTheme((mode) => {
+      lightOrDarkMode = mode;
+    });
+  });
   // BOLT_SAMPLECODE_END
 </script>
 
@@ -31,7 +40,11 @@
     href="https://hyperbrew.co/resources/bolt-figma/"
     target="_blank"
   >
-    <img src={boltIcon} alt="" />
+    {#if lightOrDarkMode === "dark"}
+      <img src={boltIconDark} alt="" />
+    {:else if lightOrDarkMode === "light"}
+      <img src={boltIconLight} alt="" />
+    {/if}
   </a>
   <div class="stack-icons">
     <a href="https://vitejs.dev" target="_blank">
