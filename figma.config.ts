@@ -9,6 +9,7 @@ const manifest: PluginManifest = {
   editorType: [
     "figma", // BOLT_FIGMA_ONLY
     "figjam", // BOLT_FIGJAM_ONLY
+    "dev", // BOLT_FIGMADEV_ONLY
   ],
   networkAccess: {
     allowedDomains: ["*"],

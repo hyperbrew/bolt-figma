@@ -21,7 +21,16 @@ export const frameworkOptions: ArgOpt[] = [
 ];
 
 export const appOptions: ArgOpt[] = [
-  { value: "figma", label: "Figma", files: ["src/api/figma.ts"] },
+  {
+    value: "figma",
+    label: "Figma ( Design Mode )",
+    files: ["src/api/figma.ts"],
+  },
+  {
+    value: "figmadev",
+    label: "Figma ( Dev Mode )",
+    files: ["src/api/figjam.ts"],
+  },
   { value: "figjam", label: "Figjam", files: ["src/api/figjam.ts"] },
 ];
 
@@ -96,6 +105,15 @@ const initData: BoltInitData = {
       alias: "a",
       describe: "Select app(s) for your plugin:",
       options: appOptions,
+      validator: (input: string[]) => {
+        if (input.length < 1) return `At Least One value Required!`;
+        if (
+          input.length === 2 &&
+          input.includes("figjam") &&
+          input.includes("figmadev")
+        )
+          return `You cannot select only "Figma (Dev Mode)" & "FigJam". If you want to include both, you must also include "Figma (Design Mode)"`;
+      },
       required: true,
     },
     {
