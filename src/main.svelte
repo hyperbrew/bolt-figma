@@ -7,20 +7,20 @@
   import sassIcon from "./assets/sass.svg?raw";
   // BOLT_SAMPLECODE_END
 
-  export const post = (msg: Message) => {
+  const post = (msg: Message) => {
     parent.postMessage({ pluginMessage: msg }, "*");
   };
 
   // BOLT_SAMPLECODE_START
+  let count: number = 0;
+  const increment = () => (count += 1);
+
   const helloWorld = () => {
     post({
       func: "helloWorld",
       callback: "",
     });
   };
-
-  let count: number = 0;
-  const increment = () => (count += 1);
   // BOLT_SAMPLECODE_END
 </script>
 
@@ -64,5 +64,6 @@
   <!-- BOLT_SAMPLECODE_END -->
 </main>
 
-<style>
+<style lang="scss">
+  @import "./variables.scss";
 </style>

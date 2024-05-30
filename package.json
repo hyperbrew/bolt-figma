@@ -30,7 +30,15 @@
     "vite-figma-plugin": "^0.0.2",
     "vite-plugin-singlefile": "^0.13.5"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vue": "^3.4.27",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-vue": "^5.0.4"
+  },
   "files": [
     "index.html",
     "package.json",

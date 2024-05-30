@@ -34,7 +34,13 @@ body {
 }
 
 .card {
-  padding: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 #app {

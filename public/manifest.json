@@ -4,5 +4,9 @@
   "api": "1.0.0",
   "main": "code.js",
   "ui": "index.html",
-  "editorType": ["figma"]
+  "editorType": ["figma"],
+  "networkAccess": {
+    "allowedDomains": ["*"],
+    "reasoning": "For accessing local images and icons"
+  }
 }
