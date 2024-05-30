@@ -15,11 +15,11 @@ export default defineConfig({
     react(), // BOLT_REACT_ONLY
     vue(), // BOLT_VUE_ONLY
     svelte({ preprocess: sveltePreprocess({ typescript: true }) }), // BOLT_SVELTE_ONLY
-    ,
     viteSingleFile(),
     figmaPlugin(),
   ],
   build: {
+    assetsInlineLimit: Infinity,
     emptyOutDir: false,
     outDir: ".tmp",
   },

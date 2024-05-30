@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 // BOLT_SAMPLECODE_START
-import boltIcon from "./assets/bolt-figma-light.svg?raw";
-import viteIcon from "./assets/vite.svg?raw";
-import reactIcon from "./assets/react.svg?raw";
-import typescriptIcon from "./assets/typescript.svg?raw";
-import sassIcon from "./assets/sass.svg?raw";
+import boltIcon from "./assets/bolt-figma-light.svg";
+import viteIcon from "./assets/vite.svg";
+import reactIcon from "./assets/react.svg";
+import typescriptIcon from "./assets/typescript.svg";
+import sassIcon from "./assets/sass.svg";
 // BOLT_SAMPLECODE_END
 
 export const App = () => {
@@ -28,27 +28,31 @@ export const App = () => {
     <>
       <main>
         {/* BOLT_SAMPLECODE_START */}
-        <a href="https://github.com/hyperbrew/bolt-figma/" target="_blank">
-          <div dangerouslySetInnerHTML={{ __html: boltIcon }}></div>
+        <a
+          className="bolt-icon"
+          href="https://hyperbrew.co/resources/bolt-figma/"
+          target="_blank"
+        >
+          <img src={boltIcon} alt="" />
         </a>
         <div className="stack-icons">
           <a href="https://vitejs.dev" target="_blank">
-            <div dangerouslySetInnerHTML={{ __html: viteIcon }}></div>
+            <img src={viteIcon} alt="" />
             <span>Vite</span>
           </a>
           +
-          <a href="https://svelte.dev" target="_blank">
-            <div dangerouslySetInnerHTML={{ __html: reactIcon }}></div>
+          <a href="https://react.dev" target="_blank">
+            <img src={reactIcon} alt="" />
             <span> React </span>
           </a>
           +
           <a href="https://www.typescriptlang.org/" target="_blank">
-            <div dangerouslySetInnerHTML={{ __html: typescriptIcon }}></div>
+            <img src={typescriptIcon} alt="" />
             <span> TypeScript </span>
           </a>
           +
           <a href="https://sass-lang.com/" target="_blank">
-            <div dangerouslySetInnerHTML={{ __html: sassIcon }}></div>
+            <img src={sassIcon} alt="" />
             <span> Sass </span>
           </a>
         </div>

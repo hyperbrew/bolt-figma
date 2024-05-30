@@ -2,11 +2,11 @@
 import { ref } from "vue";
 
 // BOLT_SAMPLECODE_START
-import boltIcon from "./assets/bolt-figma-light.svg?raw";
-import viteIcon from "./assets/vite.svg?raw";
-import vueIcon from "./assets/vue.svg?raw";
-import typescriptIcon from "./assets/typescript.svg?raw";
-import sassIcon from "./assets/sass.svg?raw";
+import boltIcon from "./assets/bolt-figma-light.svg";
+import viteIcon from "./assets/vite.svg";
+import vueIcon from "./assets/vue.svg";
+import typescriptIcon from "./assets/typescript.svg";
+import sassIcon from "./assets/sass.svg";
 // BOLT_SAMPLECODE_END
 
 const post = (msg: Message) => {
@@ -28,27 +28,27 @@ const helloWorld = () => {
 <template>
   <main>
     <!-- BOLT_SAMPLECODE_START -->
-    <a href="https://github.com/hyperbrew/bolt-figma/" target="_blank">
-      <div v-html="boltIcon"></div>
+    <a href="https://hyperbrew.co/resources/bolt-figma/" target="_blank">
+      <img :src="boltIcon" alt="" />
     </a>
     <div class="stack-icons">
       <a href="https://vitejs.dev" target="_blank"
-        ><div v-html="viteIcon"></div>
+        ><img :src="viteIcon" alt="" />
         <span>Vite</span>
       </a>
       +
-      <a href="https://svelte.dev" target="_blank">
-        <div v-html="vueIcon"></div>
+      <a href="https://vuejs.org/" target="_blank">
+        <img :src="vueIcon" alt="" />
         <span> Vue </span>
       </a>
       +
       <a href="https://www.typescriptlang.org/" target="_blank">
-        <div v-html="typescriptIcon"></div>
+        <img :src="typescriptIcon" alt="" />
         <span> TypeScript </span>
       </a>
       +
       <a href="https://sass-lang.com/" target="_blank">
-        <div v-html="sassIcon"></div>
+        <img :src="sassIcon" alt="" />
         <span> Sass </span>
       </a>
     </div>
