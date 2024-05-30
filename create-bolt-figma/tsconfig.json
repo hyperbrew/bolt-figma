@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
+    "target": "es2021",
     "module": "commonjs",
     "declaration": true,
-    "outDir": "./lib",
     "strict": true,
     "allowJs": true,
-    "noImplicitAny": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "newLine": "lf",
+    "outDir": "dist"
   },
-  "include": ["src", "src-code"],
+  "files": ["index.ts"],
   "exclude": ["node_modules"]
 }

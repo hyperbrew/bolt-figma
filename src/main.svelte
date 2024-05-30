@@ -1,13 +1,23 @@
 <script lang="ts">
-  import boltIcon from "./assets/bolt-figma-light.svg?raw";
-  import viteIcon from "./assets/vite.svg?raw";
-  import svelteIcon from "./assets/svelte.svg?raw";
-  import typescriptIcon from "./assets/typescript.svg?raw";
-  import sassIcon from "./assets/sass.svg?raw";
+  // BOLT_SAMPLECODE_START
+  import boltIconLight from "./assets/bolt-figma-lightmode.svg";
+  import boltIconDark from "./assets/bolt-figma-darkmode.svg";
+  import viteIcon from "./assets/vite.svg";
+  import svelteIcon from "./assets/svelte.svg";
+  import typescriptIcon from "./assets/typescript.svg";
+  import sassIcon from "./assets/sass.svg";
+  import { getColorTheme, subscribeColorTheme } from "./utils/utils";
+  import { onMount } from "svelte";
+  // BOLT_SAMPLECODE_END
 
-  export const post = (msg: Message) => {
+  const post = (msg: Message) => {
     parent.postMessage({ pluginMessage: msg }, "*");
   };
+
+  // BOLT_SAMPLECODE_START
+  let count: number = 0;
+  let lightOrDarkMode = getColorTheme();
+  const increment = () => (count += 1);
 
   const helloWorld = () => {
     post({
@@ -15,33 +25,45 @@
       callback: "",
     });
   };
-
-  let count: number = 0;
-  const increment = () => (count += 1);
+  onMount(() => {
+    subscribeColorTheme((mode) => {
+      lightOrDarkMode = mode;
+    });
+  });
+  // BOLT_SAMPLECODE_END
 </script>
 
 <main>
-  <a href="https://github.com/hyperbrew/bolt-figma/" target="_blank"
-    >{@html boltIcon}
+  <!-- BOLT_SAMPLECODE_START -->
+  <a
+    class="bolt-icon"
+    href="https://hyperbrew.co/resources/bolt-figma/"
+    target="_blank"
+  >
+    {#if lightOrDarkMode === "dark"}
+      <img src={boltIconDark} alt="" />
+    {:else if lightOrDarkMode === "light"}
+      <img src={boltIconLight} alt="" />
+    {/if}
   </a>
   <div class="stack-icons">
-    <a href="https://vitejs.dev" target="_blank"
-      >{@html viteIcon}
+    <a href="https://vitejs.dev" target="_blank">
+      <img src={viteIcon} alt="" />
       <span>Vite</span>
     </a>
     +
     <a href="https://svelte.dev" target="_blank">
-      {@html svelteIcon}
+      <img src={svelteIcon} alt="" />
       <span> Svelte </span>
     </a>
     +
     <a href="https://www.typescriptlang.org/" target="_blank">
-      {@html typescriptIcon}
+      <img src={typescriptIcon} alt="" />
       <span> TypeScript </span>
     </a>
     +
     <a href="https://sass-lang.com/" target="_blank">
-      {@html sassIcon}
+      <img src={sassIcon} alt="" />
       <span> Sass </span>
     </a>
   </div>
@@ -56,7 +78,9 @@
     Edit
     <code>main.svelte</code> and save to use Hot Reloading.
   </p>
+  <!-- BOLT_SAMPLECODE_END -->
 </main>
 
-<style>
+<style lang="scss">
+  @import "./variables.scss";
 </style>

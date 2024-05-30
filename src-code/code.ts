@@ -1,6 +1,10 @@
 import { myFunction } from "./lib";
 
-figma.showUI(__html__, { width: 550, height: 600 });
+figma.showUI(__html__, {
+  themeColors: true,
+  width: 550,
+  height: 600,
+});
 
 figma.currentPage.children;
 

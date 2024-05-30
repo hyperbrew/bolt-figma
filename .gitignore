@@ -25,3 +25,4 @@ dist-ssr
 
 src/code.js
 .tmp
+vite.config.ts.timestamp*
