@@ -10,6 +10,8 @@ import vue from "@vitejs/plugin-vue"; // BOLT_VUE_ONLY
 import { config } from "./figma.config";
 
 const action = process.env.ACTION;
+const mode = process.env.MODE;
+
 if (action) {
   runAction(
     {},
@@ -27,7 +29,7 @@ export default defineConfig({
     vue(), // BOLT_VUE_ONLY
     svelte({ preprocess: sveltePreprocess({ typescript: true }) }), // BOLT_SVELTE_ONLY
     viteSingleFile(),
-    figmaPlugin(config),
+    figmaPlugin(config, mode),
   ],
   build: {
     assetsInlineLimit: Infinity,

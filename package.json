@@ -15,6 +15,7 @@
     "buildcode": "vite build --config vite.config.code.ts",
     "preview": "vite preview",
     "hmr": "vite",
+    "zip": "cross-env MODE=zip vite build",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "dep": "cross-env ACTION=dependencyCheck vite",
     "example": "cross-env ACTION=example vite"

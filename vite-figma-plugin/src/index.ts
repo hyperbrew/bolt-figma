@@ -6,6 +6,7 @@ import {
   packageSync,
   emptyFolder,
   copyFilesRecursively,
+  zipPackage,
 } from "meta-bolt/dist/plugin-utils";
 import { FigmaConfig } from "./types";
 
@@ -19,8 +20,9 @@ export const figmaPluginInit = () => {
   startCodeWatcher();
 };
 
-export const figmaPlugin: (config: FigmaConfig) => Plugin = (
-  config: FigmaConfig
+export const figmaPlugin: (config: FigmaConfig, mode?: string) => Plugin = (
+  config: FigmaConfig,
+  mode?: string
 ) => ({
   name: "vite-figma-plugin",
   writeBundle() {
@@ -39,6 +41,14 @@ export const figmaPlugin: (config: FigmaConfig) => Plugin = (
         triggerFigmaRefresh(path.join(dist, index));
       });
     }, 100);
+  },
+  async closeBundle() {
+    if (mode === "zip") {
+      const zipDir = path.join(process.cwd(), "zip");
+      const srcDir = path.join(process.cwd(), "dist");
+      const name = `${config.manifest.name}_${config.version}`;
+      await zipPackage(name, zipDir, srcDir, config.copyZipAssets, true);
+    }
   },
 });
 

@@ -25,4 +25,5 @@ dist-ssr
 
 src/code.js
 .tmp
+zip
 vite.config.ts.timestamp*

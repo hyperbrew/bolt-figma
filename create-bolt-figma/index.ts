@@ -112,7 +112,7 @@ const initData: BoltInitData = {
           input.includes("figjam") &&
           input.includes("figmadev")
         )
-          return `You cannot select only "Figma (Dev Mode)" & "FigJam". If you want to include both, you must also include "Figma (Design Mode)"`;
+          return `You cannot select only "Figma (Dev Mode)" & "FigJam".\nIf you want to include both, you must also include "Figma (Design Mode)"`;
       },
       required: true,
     },

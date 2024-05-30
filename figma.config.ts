@@ -1,4 +1,5 @@
 import type { FigmaConfig, PluginManifest } from "vite-figma-plugin/lib/types";
+import { version } from "./package.json";
 
 const manifest: PluginManifest = {
   name: "Bolt Figma", // BOLT_DISPLAYNAME_REPLACE
@@ -23,5 +24,6 @@ const extraPrefs = {
 
 export const config: FigmaConfig = {
   manifest,
+  version,
   ...extraPrefs,
 };
