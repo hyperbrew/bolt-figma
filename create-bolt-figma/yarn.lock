@@ -1304,10 +1304,10 @@ base64-js@^1.3.1:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-bolt-figma@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/bolt-figma/-/bolt-figma-0.0.6.tgz#9f3e97695571d64daf4547fcbf1d5204c09dfc90"
-  integrity sha512-ZuCOqy1BTQ1GDT634evupDIWnja+8AV6oCQ7MUJBCzVA6bKrEwR/vo+sXO8e4FSNeIcSQBo0rRImCYHYM7MLzA==
+bolt-figma@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/bolt-figma/-/bolt-figma-0.0.8.tgz#ce96b66a71525c612be7d9b638bb2a93705e7871"
+  integrity sha512-QYdJ0b5W2aojNPXUWWVMaExoEjcWqN/DhC83P2h+rNdPR8KXWFYZgeRIedTv7pxwmEChpeaNLO11N6qntO20sw==
   dependencies:
     "@types/react" "^18.3.3"
     "@types/react-dom" "^18.3.0"
@@ -2495,6 +2495,11 @@ json5@^2.2.1, json5@^2.2.3:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
+jsonc-parser@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.2.1.tgz#031904571ccf929d7670ee8c547545081cb37f1a"
+  integrity sha512-AilxAyFOAcK5wA1+LeaySVBrHsGQvUFCDWXKpZjzaL0PqW+xfBOttn8GNtWKFWqneyMZj41MWF9Kl6iPWLwgOA==
+
 jsonfile@^6.0.1:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
@@ -2598,10 +2603,10 @@ merge2@^1.3.0:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-meta-bolt@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.4.tgz#de6a87ca731fd35bd71415843031d598b4b9aabb"
-  integrity sha512-QzcTyCC3JS371j8L5jqo0ZjwTD1i6ChGBCGrfTqPc6EZdQ0gYKJ+zM+kcrVFIyS/KzRWYH40dhEKytoaWkB7CA==
+meta-bolt@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.5.tgz#f6d6e711212ee464eb44358cc8b92bc9270ecf14"
+  integrity sha512-xyJu/kYc+35xhslEaMqHioq5h9+wFCYo+3FgA2b+NygJCvbkHTEomzG38g8fpxUz0Kbv3o7MlYgP9aqFFOXV5g==
   dependencies:
     "@clack/prompts" "^0.7.0"
     "@types/prettier" "^3.0.0"
@@ -2612,6 +2617,7 @@ meta-bolt@^0.0.4:
     execa "^5.1.1"
     fast-glob "^3.3.2"
     fs-extra "^10.0.1"
+    jsonc-parser "^3.2.1"
     picocolors "^1.0.0"
     prettier "^3.1.0"
     radash "^11.0.0"

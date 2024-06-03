@@ -909,17 +909,6 @@ binary-extensions@^2.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
-bolt-uxp@^0.1.25:
-  version "0.1.25"
-  resolved "https://registry.yarnpkg.com/bolt-uxp/-/bolt-uxp-0.1.25.tgz#db2021f3829a026283020480aa6556d998f0c090"
-  integrity sha512-YDUJRsLVFsu87SEFmXv1L4xh9yqCaavqT4Ivl0laMQ1i0eEhpdBg6h26WcChPknCFRTnpDdHsusDLOWP+i4iQg==
-  dependencies:
-    "@vitejs/plugin-react" "^4.2.1"
-    "@vitejs/plugin-vue" "^5.0.4"
-    react "^18.2.0"
-    react-dom "^18.2.0"
-    vue "^3.2.45"
-
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -1551,6 +1540,11 @@ json5@^2.2.3:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
+jsonc-parser@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.2.1.tgz#031904571ccf929d7670ee8c547545081cb37f1a"
+  integrity sha512-AilxAyFOAcK5wA1+LeaySVBrHsGQvUFCDWXKpZjzaL0PqW+xfBOttn8GNtWKFWqneyMZj41MWF9Kl6iPWLwgOA==
+
 jsonfile@^6.0.1:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
@@ -1642,21 +1636,21 @@ merge2@^1.3.0:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-meta-bolt@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.3.tgz#da46f320c6e88f94129f60ebbc0d1f642ef98813"
-  integrity sha512-WaNzWjiw7nc5fKKCtzNFhGnv3jnEf3JTz6b2ZzMgJaVbP/rSPjxcOFskbdmz1k2+pKiEjbXjA02BPetZmDn/dw==
+meta-bolt@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.5.tgz#f6d6e711212ee464eb44358cc8b92bc9270ecf14"
+  integrity sha512-xyJu/kYc+35xhslEaMqHioq5h9+wFCYo+3FgA2b+NygJCvbkHTEomzG38g8fpxUz0Kbv3o7MlYgP9aqFFOXV5g==
   dependencies:
     "@clack/prompts" "^0.7.0"
     "@types/prettier" "^3.0.0"
     "@types/resolve-dir" "^0.0.0"
     archiver "^7.0.1"
-    bolt-uxp "^0.1.25"
     cliui "^8.0.1"
     commander "^12.1.0"
     execa "^5.1.1"
     fast-glob "^3.3.2"
     fs-extra "^10.0.1"
+    jsonc-parser "^3.2.1"
     picocolors "^1.0.0"
     prettier "^3.1.0"
     radash "^11.0.0"
@@ -1871,7 +1865,7 @@ radash@^11.0.0:
   resolved "https://registry.yarnpkg.com/radash/-/radash-11.0.0.tgz#925698e94b554336fc159c253ac33a9a49881835"
   integrity sha512-CRWxTFTDff0IELGJ/zz58yY4BDgyI14qSM5OLNKbCItJrff7m7dXbVF0kWYVCXQtPb3SXIVhXvAImH6eT7VLSg==
 
-react-dom@^18.2.0, react-dom@^18.3.1:
+react-dom@^18.3.1:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.1.tgz#c2265d79511b57d479b3dd3fdfa51536494c5cb4"
   integrity sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==
@@ -1884,7 +1878,7 @@ react-refresh@^0.14.2:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.2.tgz#3833da01ce32da470f1f936b9d477da5c7028bf9"
   integrity sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==
 
-react@^18.2.0, react@^18.3.1:
+react@^18.3.1:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react/-/react-18.3.1.tgz#49ab892009c53933625bd16b2533fc754cab2891"
   integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
@@ -2304,12 +2298,12 @@ v8-compile-cache-lib@^3.0.1:
   resolved "https://registry.yarnpkg.com/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz#6336e8d71965cb3d35a1bbb7868445a7c05264bf"
   integrity sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==
 
-vite-figma-plugin@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/vite-figma-plugin/-/vite-figma-plugin-0.0.5.tgz#cb021d8b00f77b277454d241cf271ebf45f35785"
-  integrity sha512-H9zRWsc6e4YbrAt5avRQg33RnRZo6XurTKhI6vgfxwPxxnf97Q8O3MuYF5ldy0E2BNroeIuhpbA32A41EhKCYg==
+vite-figma-plugin@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/vite-figma-plugin/-/vite-figma-plugin-0.0.7.tgz#79b0be8a51ef8766102793268e77f63e72c9b49e"
+  integrity sha512-hTEkYMmyo/QRy0b9cU4rdwSEOJ0N2Dg0K39A7X1m+zffFx4rks5hHRKWAvCg6MhNZKbwFs1N0QEHl8zN0fE6vA==
   dependencies:
-    meta-bolt "^0.0.3"
+    meta-bolt "^0.0.5"
     typescript "^5.4.5"
 
 vite-plugin-singlefile@^0.13.5:
@@ -2335,7 +2329,7 @@ vitefu@^0.2.4:
   resolved "https://registry.yarnpkg.com/vitefu/-/vitefu-0.2.5.tgz#c1b93c377fbdd3e5ddd69840ea3aa70b40d90969"
   integrity sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==
 
-vue@^3.2.45, vue@^3.4.27:
+vue@^3.4.27:
   version "3.4.27"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.4.27.tgz#40b7d929d3e53f427f7f5945386234d2854cc2a1"
   integrity sha512-8s/56uK6r01r1icG/aEOHqyMVxd1bkYcSe9j8HcKtr/xTOFWvnzIVTehNW+5Yt89f+DLBe4A569pnZLS5HzAMA==

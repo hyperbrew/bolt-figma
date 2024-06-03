@@ -1,6 +1,6 @@
 {
   "name": "bolt-figma",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "repository": {
     "type": "git",
     "url": "https://github.com/hyperbrew/bolt-figma.git"
@@ -29,7 +29,7 @@
     "svelte-check": "^3.4.6",
     "typescript": "^5.0.2",
     "vite": "^5.2.12",
-    "vite-figma-plugin": "^0.0.6",
+    "vite-figma-plugin": "^0.0.7",
     "vite-plugin-singlefile": "^0.13.5"
   },
   "dependencies": {
@@ -45,9 +45,9 @@
   "files": [
     "index.html",
     "package.json",
-    "package.react.json",
-    "package.svelte.json",
-    "package.vue.json",
+    "package.react.jsonc",
+    "package.svelte.jsonc",
+    "package.vue.jsonc",
     "public/**/*",
     "public-zip/**/*",
     "README.md",

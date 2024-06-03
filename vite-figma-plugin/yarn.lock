@@ -645,6 +645,11 @@ jackspeak@^3.1.2:
   optionalDependencies:
     "@pkgjs/parseargs" "^0.11.0"
 
+jsonc-parser@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.2.1.tgz#031904571ccf929d7670ee8c547545081cb37f1a"
+  integrity sha512-AilxAyFOAcK5wA1+LeaySVBrHsGQvUFCDWXKpZjzaL0PqW+xfBOttn8GNtWKFWqneyMZj41MWF9Kl6iPWLwgOA==
+
 jsonfile@^6.0.1:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
@@ -686,10 +691,10 @@ merge2@^1.3.0:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-meta-bolt@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.4.tgz#de6a87ca731fd35bd71415843031d598b4b9aabb"
-  integrity sha512-QzcTyCC3JS371j8L5jqo0ZjwTD1i6ChGBCGrfTqPc6EZdQ0gYKJ+zM+kcrVFIyS/KzRWYH40dhEKytoaWkB7CA==
+meta-bolt@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.5.tgz#f6d6e711212ee464eb44358cc8b92bc9270ecf14"
+  integrity sha512-xyJu/kYc+35xhslEaMqHioq5h9+wFCYo+3FgA2b+NygJCvbkHTEomzG38g8fpxUz0Kbv3o7MlYgP9aqFFOXV5g==
   dependencies:
     "@clack/prompts" "^0.7.0"
     "@types/prettier" "^3.0.0"
@@ -700,6 +705,7 @@ meta-bolt@^0.0.4:
     execa "^5.1.1"
     fast-glob "^3.3.2"
     fs-extra "^10.0.1"
+    jsonc-parser "^3.2.1"
     picocolors "^1.0.0"
     prettier "^3.1.0"
     radash "^11.0.0"

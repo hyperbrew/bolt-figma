@@ -1,6 +1,6 @@
 {
   "name": "vite-figma-plugin",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "description": "A Vite Plugin for building Figma Plugin Panels",
   "main": "lib/index.js",
@@ -16,7 +16,7 @@
     "publish-beta": "npm publish --access public --tag beta"
   },
   "dependencies": {
-    "meta-bolt": "^0.0.4",
+    "meta-bolt": "^0.0.5",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
