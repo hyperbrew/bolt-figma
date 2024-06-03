@@ -50,6 +50,8 @@ const initData: BoltInitData = {
       "public-zip/**/*",
       ".github/**/*",
       ".gitignore",
+      ".npmrc",
+      ".prettierrc",
       ".env.example",
     ],
     globalExcludes: [".env", "yarn-error.log", "package.json"],

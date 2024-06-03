@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { sveltePreprocess } from "svelte-preprocess/dist/autoProcess"; // BOLT_SVELTE_ONLY
+import sveltePreprocess from "svelte-preprocess"; // BOLT_SVELTE_ONLY
 import { viteSingleFile } from "vite-plugin-singlefile";
 import { figmaPlugin, figmaPluginInit, runAction } from "vite-figma-plugin";
 

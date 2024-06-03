@@ -11,7 +11,7 @@ export const triggerFigmaRefresh = (file: string) => {
 };
 
 const buildCode = (runner: string) => {
-  const res = execSync(`${runner} buildcode`, {
+  const res = execSync(`${runner} run buildcode`, {
     encoding: "utf-8",
   });
   console.log(res.toString());

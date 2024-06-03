@@ -27,3 +27,5 @@ src/code.js
 .tmp
 zip
 vite.config.ts.timestamp*
+package-lock.json
+pnpm-lock.yaml
