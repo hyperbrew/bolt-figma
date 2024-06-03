@@ -1,6 +1,6 @@
 {
   "name": "bolt-figma",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "repository": {
     "type": "git",
     "url": "https://github.com/hyperbrew/bolt-figma.git"
@@ -30,7 +30,7 @@
     "svelte-preprocess": "^5.1.4",
     "typescript": "^5.0.2",
     "vite": "^5.2.12",
-    "vite-figma-plugin": "^0.0.14",
+    "vite-figma-plugin": "^0.0.15",
     "vite-plugin-singlefile": "^0.13.5",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

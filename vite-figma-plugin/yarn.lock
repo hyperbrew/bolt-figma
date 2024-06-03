@@ -842,10 +842,10 @@ merge2@^1.3.0:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-meta-bolt@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.7.tgz#03a3af5697efc47de2a960187e91314bc20c5f8f"
-  integrity sha512-dVf2sSj1YTGp3X5LjvInhIM4aYIH2yF2oemDKYY/MBYM+WiSqce4/P1NG8aWacd1N0Xl+7WNLO85JfXloEdtJw==
+meta-bolt@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.8.tgz#2b3845fd9189644b560d6ff48771d1b9f14a776c"
+  integrity sha512-KgUho6HvnHWEn3YewaO/3CMUlxAgZWTB+LAOqy374uQRUZJ8Vxk0w3dX3z1DSoitjQtd87nkksir+xu55ZcFvA==
   dependencies:
     "@clack/prompts" "^0.7.0"
     "@types/prettier" "^3.0.0"

@@ -18,7 +18,7 @@ const buildCode = (runner: string) => {
 };
 
 const devCode = (runner: string) => {
-  exec(`${runner} devcode`, (err, stdout, stderr) => {
+  exec(`${runner} run devcode`, (err, stdout, stderr) => {
     if (err) return console.error(err);
     console.log(stdout);
   });
