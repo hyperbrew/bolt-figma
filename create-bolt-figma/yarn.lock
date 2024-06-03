@@ -1304,10 +1304,10 @@ base64-js@^1.3.1:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-bolt-figma@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/bolt-figma/-/bolt-figma-0.0.11.tgz#18247a53e17ea97ca014ebd5cc0317c6f0a4e2c5"
-  integrity sha512-b99+u69tw16p+FGxIP2JBcdL+YpNiYfcueE0gE3nQU11X8LAmwuyDhcKDahUq+8Jdnwr2ujwqeOS4PQzRAe70A==
+bolt-figma@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/bolt-figma/-/bolt-figma-0.0.12.tgz#fc3220527fafb17e81a344c977d8d07166abc292"
+  integrity sha512-r40BEz+pWPzgK+c0uNSxNDWwur9rCqB6Mw+GLe3H2Q9CZqKVDSg9x2dv+2WQxBiGDW+7NUN2xpVgiVKbYJbL8w==
   dependencies:
     "@types/react" "^18.3.3"
     "@types/react-dom" "^18.3.0"
@@ -2603,10 +2603,10 @@ merge2@^1.3.0:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-meta-bolt@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.6.tgz#8b6e44608b5b2a05dd4ee8746152eb9920aa991b"
-  integrity sha512-PbY1QAP7t8pG9gT2uUTEEX0Q7S76SJkSxVQhzp6pn/iLZ1S70+ubcj+KS0xUnP1ddH7zkrJ2pVGXBsSSKSV9Gw==
+meta-bolt@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.7.tgz#03a3af5697efc47de2a960187e91314bc20c5f8f"
+  integrity sha512-dVf2sSj1YTGp3X5LjvInhIM4aYIH2yF2oemDKYY/MBYM+WiSqce4/P1NG8aWacd1N0Xl+7WNLO85JfXloEdtJw==
   dependencies:
     "@clack/prompts" "^0.7.0"
     "@types/prettier" "^3.0.0"

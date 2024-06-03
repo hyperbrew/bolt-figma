@@ -1636,10 +1636,10 @@ merge2@^1.3.0:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-meta-bolt@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.6.tgz#8b6e44608b5b2a05dd4ee8746152eb9920aa991b"
-  integrity sha512-PbY1QAP7t8pG9gT2uUTEEX0Q7S76SJkSxVQhzp6pn/iLZ1S70+ubcj+KS0xUnP1ddH7zkrJ2pVGXBsSSKSV9Gw==
+meta-bolt@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.7.tgz#03a3af5697efc47de2a960187e91314bc20c5f8f"
+  integrity sha512-dVf2sSj1YTGp3X5LjvInhIM4aYIH2yF2oemDKYY/MBYM+WiSqce4/P1NG8aWacd1N0Xl+7WNLO85JfXloEdtJw==
   dependencies:
     "@clack/prompts" "^0.7.0"
     "@types/prettier" "^3.0.0"
@@ -2298,12 +2298,12 @@ v8-compile-cache-lib@^3.0.1:
   resolved "https://registry.yarnpkg.com/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz#6336e8d71965cb3d35a1bbb7868445a7c05264bf"
   integrity sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==
 
-vite-figma-plugin@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/vite-figma-plugin/-/vite-figma-plugin-0.0.11.tgz#57b33fb8bc011bc4fac8e4153c16787fdfc1de69"
-  integrity sha512-Pmj/ZwHk5wYXXslhLunYp9HPWhZAjJlLV5Syo7rseh4RbLxTNhVTI5n9W64DDyqk6DE7DtItg17gUAQSmQAdQg==
+vite-figma-plugin@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/vite-figma-plugin/-/vite-figma-plugin-0.0.12.tgz#9c02ded8d6802b921adcc80b3d77f2f233f5dfb8"
+  integrity sha512-nTCczUEJnbRglO7MoK6gTAOGJalPSilbBWIClHaxNdYlD9MaYSf5iiQUQJZpmTu7G3Njsl2ghJUDzGyUvzyysA==
   dependencies:
-    meta-bolt "^0.0.6"
+    meta-bolt "^0.0.7"
     typescript "^5.4.5"
 
 vite-plugin-singlefile@^0.13.5:
