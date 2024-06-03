@@ -12,13 +12,7 @@ import { config } from "./figma.config";
 const action = process.env.ACTION;
 const mode = process.env.MODE;
 
-if (action) {
-  runAction(
-    {},
-    // config
-    action
-  );
-}
+if (action) runAction(config, action);
 
 figmaPluginInit();
 

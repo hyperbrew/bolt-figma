@@ -1,4 +1,3 @@
-process.env.BOLT_MODULEONLY = "true";
 import { main } from "meta-bolt";
 import type { BoltInitData, ArgOpt } from "meta-bolt";
 
@@ -142,6 +141,6 @@ const initData: BoltInitData = {
   ],
 };
 
-process.env.BOLT_MODULEONLY = "true";
-
-main(initData);
+//* if not using as a module, run immediately
+console.log("BOLT_MODULEONLY", process.env.BOLT_MODULEONLY);
+if (!process.env.BOLT_MODULEONLY) main(initData);

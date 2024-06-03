@@ -1,6 +1,6 @@
 {
   "name": "create-bolt-figma",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "license": "MIT",
   "bin": {
     "create-bolt-uxp": "dist/index.js"
@@ -30,10 +30,11 @@
     "@types/prettier": "^3.0.0",
     "@types/resolve-dir": "^0.0.0",
     "bolt-figma": "^0.0.0",
+    "cross-env": "^7.0.3",
     "execa": "^5.1.1",
     "fast-glob": "^3.3.2",
     "fs-extra": "^10.0.1",
-    "meta-bolt": "^0.0.1",
+    "meta-bolt": "^0.0.3",
     "picocolors": "^1.0.0",
     "prettier": "^3.1.0",
     "radash": "^11.0.0",
