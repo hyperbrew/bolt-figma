@@ -1304,10 +1304,10 @@ base64-js@^1.3.1:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-bolt-figma@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/bolt-figma/-/bolt-figma-0.0.8.tgz#ce96b66a71525c612be7d9b638bb2a93705e7871"
-  integrity sha512-QYdJ0b5W2aojNPXUWWVMaExoEjcWqN/DhC83P2h+rNdPR8KXWFYZgeRIedTv7pxwmEChpeaNLO11N6qntO20sw==
+bolt-figma@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/bolt-figma/-/bolt-figma-0.0.9.tgz#b67b5ef1ae4c811ad11c7d007e92a1788d7a1a72"
+  integrity sha512-YVWi60bNFy5woknmFiniUIGmOAdXIrDDg6nx5vuhB5eJh9K+ooylJHa67y2R2LJ3s2SIIBdZx8p70ZUs5KSziA==
   dependencies:
     "@types/react" "^18.3.3"
     "@types/react-dom" "^18.3.0"

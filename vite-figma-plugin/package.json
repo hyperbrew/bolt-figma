@@ -1,6 +1,6 @@
 {
   "name": "vite-figma-plugin",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "description": "A Vite Plugin for building Figma Plugin Panels",
   "main": "lib/index.js",
