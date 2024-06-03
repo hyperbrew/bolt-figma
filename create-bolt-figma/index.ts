@@ -6,17 +6,17 @@ export const frameworkOptions: ArgOpt[] = [
   {
     value: "svelte",
     label: "Svelte",
-    files: ["src/index-svelte.ts", "src/main.svelte", "package.svelte.json"],
+    files: ["src/index-svelte.ts", "src/main.svelte", "package.svelte.jsonc"],
   },
   {
     value: "react",
     label: "React",
-    files: ["src/index-react.tsx", "src/main.tsx", "package.react.json"],
+    files: ["src/index-react.tsx", "src/main.tsx", "package.react.jsonc"],
   },
   {
     value: "vue",
     label: "Vue",
-    files: ["src/index-vue.ts", "src/main.vue", "package.vue.json"],
+    files: ["src/index-vue.ts", "src/main.vue", "package.vue.jsonc"],
   },
 ];
 
@@ -51,7 +51,12 @@ const initData: BoltInitData = {
       ".gitignore",
       ".env.example",
     ],
-    globalExcludes: [".env", "yarn-error.log"],
+    globalExcludes: [".env", "yarn-error.log", "package.json"],
+    fileRenames: [
+      ["package.svelte.jsonc", "package.json"],
+      ["package.react.jsonc", "package.json"],
+      ["package.vue.jsonc", "package.json"],
+    ],
   },
   argsTemplate: [
     {
