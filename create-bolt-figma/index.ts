@@ -3,8 +3,6 @@
 import { main } from "meta-bolt";
 import type { BoltInitData, ArgOpt } from "meta-bolt";
 
-console.log("create-bolt-figma  __dirname", __dirname);
-
 export const frameworkOptions: ArgOpt[] = [
   {
     value: "svelte",
@@ -74,7 +72,7 @@ const initData: BoltInitData = {
       validator: (input: string) => {
         if (input.length < 3) return `Value is required!`;
       },
-      describe: "Name of the folder for the new Bolt UXP plugin",
+      describe: "Name of the folder for the new Figma plugin",
     },
     {
       name: "displayName",
@@ -85,7 +83,7 @@ const initData: BoltInitData = {
       validator: (input: string) => {
         if (input.length < 1) return `Value is required!`;
       },
-      describe: "Panel's display name (e.g. Bolt UXP)",
+      describe: "Panel's display name",
       alias: "n",
     },
     {
