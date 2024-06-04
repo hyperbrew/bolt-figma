@@ -2369,10 +2369,10 @@ merge2@^1.3.0:
   resolved "https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-meta-bolt@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.11.tgz#c687fcd826beffcafe26411ae2bbf310812f4786"
-  integrity sha512-JzMnnq4VKcV5NAsxvy2lLx1KSVt9PYvt+qFhuvrDQi29tPhghMFPIAol/G893+EhBmRLfTTRI8SZ+7NO1aLgbg==
+meta-bolt@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/meta-bolt/-/meta-bolt-0.0.12.tgz#c86594bd4462c0d5b5d274b013d79339c62be156"
+  integrity sha512-Cy08geBRKiP3qoEbqeTbkcsNVx5L47fUytmdpGycFmrEVtdi+V7leL80G9g8YZ5lNR7J6CAi3wmhvE1hn89dLg==
   dependencies:
     "@clack/prompts" "^0.7.0"
     "@types/prettier" "^3.0.0"
