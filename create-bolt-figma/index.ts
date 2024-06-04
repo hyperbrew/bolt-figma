@@ -3,6 +3,8 @@
 import { main } from "meta-bolt";
 import type { BoltInitData, ArgOpt } from "meta-bolt";
 
+console.log("create-bolt-figma  __dirname", __dirname);
+
 export const frameworkOptions: ArgOpt[] = [
   {
     value: "svelte",
@@ -42,6 +44,7 @@ const initData: BoltInitData = {
   },
   base: {
     module: "bolt-figma",
+    createDirName: __dirname,
     globalIncludes: [
       "*",
       "src/**/*",
