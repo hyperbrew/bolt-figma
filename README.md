@@ -9,16 +9,14 @@ A lightning-fast boilerplate for building Figma Plugins in Svelte, React, or Vue
 ## Features
 
 - Lightning Fast Hot Reloading on changes
-- Setup with TypeScript Definitions for Figma in UI and Code Contexts
+- Setup with TypeScript Definitions for Figma in Frontend, Backend, and Manifest
 - Optimized Build Size
-- Bundling in UI and Code contexts
+- Easy Smart Bundling in Frontend UI and Backend Code contexts
 - Spin a up a new project in Svete, React, or Vue
+- Select apps including Figma (Design Mode), Figma (Dev Mode), or FigJam
 - Easily configure in figma.config.ts
-- Easy Package to ZIP archive with sidecar assets
-
-#### Pending Features:
-
-- GitHub Actions ready-to-go for zip Releases (pending)
+- Easy Package to Zip archive with sidecar assets
+- GitHub Actions ready-to-go for Zip Releases
 
 ## Backers
 
