@@ -14,10 +14,10 @@ A lightning-fast boilerplate for building Figma Plugins in Svelte, React, or Vue
 - Bundling in UI and Code contexts
 - Spin a up a new project in Svete, React, or Vue
 - Easily configure in figma.config.ts
+- Easy Package to ZIP archive with sidecar assets
 
 #### Pending Features:
 
-- Easy Package to ZIP archive with sidecar assets (pending)
 - GitHub Actions ready-to-go for zip Releases (pending)
 
 ## Backers
@@ -57,20 +57,49 @@ If your team is interested in paid consulting or development with Bolt Figma, pl
 ## Prerequisites
 
 - [Node.js 18](https://nodejs.org/en/) or later
-- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) ( ensure by running `yarn set version classic` )
+- Package manager either
+  - NPM (comes with Node.js)
+  - [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) ( ensure by running `yarn set version classic` )
+  - [PNPM](https://pnpm.io/installation) ( ensure by running `pnpm --version` )
 - Figma Desktop App
 
 ## Quick Start
 
-`yarn create bolt-figma` - Create a new plugin with the create script
+Create your new Bolt Figma project (follow CLI prompts)
 
-`cd my-plugin` - Change to the new plugin directory
+- yarn - `yarn create bolt-figma`
+- npm - `npx create-bolt-figma`
+- pnpm - `pnpm create-bolt-figma`
 
-`yarn` - Install Dependencies (if not already done by create command)
+Change directory to the new project
 
-`yarn build` - Build the plugin (must run before `yarn dev`, can also run after for panel to work statically without the process)
+- `cd project`
 
-`yarn dev` - Run the plugin in hot reload mode for development with UDT (see below)
+Install Dependencies (if not already done by create command)
+
+- yarn - `yarn`
+- npm - `npm i`
+- pnpm - `pnpm i`
+
+Build the plugin (must run before `dev`, can also run after for panel to work statically without the process)
+
+- yarn `yarn build`
+- npm `npm run build`
+- pnpm `pnpm build`
+
+Run the plugin in hot reload mode for development
+
+_Note: Ensure "Hot reload plugin" is checked in Figma Plugin Development menu_
+
+- yarn `yarn dev`
+- npm `npm run dev`
+- pnpm `pnpm dev`
+
+Bundles your plugin and specified assets from `copyZipAssets` to a zip archive in the `./zip` folder
+
+- yarn `yarn zip`
+- npm `npm run zip`
+- pnpm `pnpm zip`
 
 Write frontend UI code in `src/main.svelte`
 
@@ -89,15 +118,17 @@ Write backend figma code in `src-code/code.ts`
 2. Ensure Hot Reloading is checked under `Figma Menu > Plugins > Development > Hot Reloading Plugin`
 3. Open the Dev Tools console with `Figma Menu > Plugins > Development > Show/Hide Console`
 
+---
+
 ### Info on Build Process
 
 Frontend code is built to the `.tmp` directory temporarily and then copied to the `dist` folder for final. This is done to avoid Figma throwing plugin errors with editing files directly in the `dist` folder.
 
-The frontend code (JS, CSS, HTML) is bundled into a single `index.html` file.
+The frontend code (JS, CSS, HTML) is bundled into a single `index.html` file and all assets are inlined.
 
 The backend code is bundled into a single `code.js` file.
 
-Finally the `manifest.json` is copied from the public folder as is.
+Finally the `manifest.json` is generated from the `figma.config.ts` file with type-safety. This is configured when running `yarn create bolt-figma`, but you can make additional modifications to the `figma.config.ts` file after initialization.
 
 ### Troubleshooting Assets
 

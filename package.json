@@ -16,8 +16,7 @@
     "hmr": "vite",
     "zip": "cross-env MODE=zip vite build",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "dep": "cross-env ACTION=dependencyCheck vite",
-    "example": "cross-env ACTION=example vite"
+    "dep": "cross-env ACTION=dependencyCheck vite"
   },
   "devDependencies": {
     "@figma/plugin-typings": "^1.94.0",

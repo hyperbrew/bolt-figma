@@ -10,11 +10,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build",
     "devcode": "vite build --watch --config vite.config.code.ts ",
+    "build": "vite build",
     "buildcode": "vite build --config vite.config.code.ts",
     "preview": "vite preview",
-    "hmr": "vite"
+    "hmr": "vite",
+    "zip": "cross-env MODE=zip vite build"
   },
   "dependencies": {
     "react": "^18.3.1",
