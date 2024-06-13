@@ -1,4 +1,10 @@
 import React, { useEffect, useState } from "react";
+import {
+  dispatchTS,
+  getColorTheme,
+  listenTS,
+  subscribeColorTheme,
+} from "./utils/utils";
 
 // BOLT_SAMPLECODE_START
 import boltIconLight from "./assets/bolt-figma-lightmode.svg";
@@ -7,32 +13,35 @@ import viteIcon from "./assets/vite.svg";
 import reactIcon from "./assets/react.svg";
 import typescriptIcon from "./assets/typescript.svg";
 import sassIcon from "./assets/sass.svg";
-import { getColorTheme, subscribeColorTheme } from "./utils/utils";
 // BOLT_SAMPLECODE_END
 
 export const App = () => {
-  const post = (msg: Message) => {
-    parent.postMessage({ pluginMessage: msg }, "*");
-  };
-
   // BOLT_SAMPLECODE_START
   const [count, setCount] = useState(0);
-  const [lightOrDarkMode, setLightOrDarkMode] = useState(getColorTheme());
   const increment = () => setCount((prev) => prev + 1);
 
   const helloWorld = () => {
-    post({
-      func: "helloWorld",
-      callback: "",
+    dispatchTS("hello", {
+      string: "World",
+      num: 20,
     });
-  };
 
+    listenTS(
+      "helloCallback",
+      (res) => {
+        console.log("helloCallback result: ", res);
+      },
+      true,
+    );
+  };
+  // BOLT_SAMPLECODE_END
+
+  const [lightOrDarkMode, setLightOrDarkMode] = useState(getColorTheme());
   useEffect(() => {
     subscribeColorTheme((mode) => {
       setLightOrDarkMode(mode);
     });
   }, []);
-  // BOLT_SAMPLECODE_END
   return (
     <>
       <main>

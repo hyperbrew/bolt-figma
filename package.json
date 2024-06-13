@@ -1,6 +1,6 @@
 {
   "name": "bolt-figma",
-  "version": "0.0.20",
+  "version": "0.0.22",
   "repository": {
     "type": "git",
     "url": "https://github.com/hyperbrew/bolt-figma.git"
@@ -53,6 +53,7 @@
     "README.md",
     "src/**/*",
     "src-code/**/*",
+    "shared/**/*",
     "tsconfig.json",
     "figma.config.ts",
     "vite.config.ts",

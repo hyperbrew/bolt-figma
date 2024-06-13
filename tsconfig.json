@@ -17,8 +17,8 @@
     "isolatedModules": true,
     "typeRoots": [
       "./node_modules/@types",
-      "./node_modules/@figma",
-      "./src/globals.d.ts"
+      "./src/globals.d.ts",
+      "shared/universals.d.ts"
     ]
   },
   "include": [
@@ -28,6 +28,7 @@
     "src/**/*.vue",
     "src/**/*.js",
     "src/**/*.svelte",
-    "src-code/**/*.ts"
+    "src-code/**/*.ts",
+    "shared/universals.d.ts"
   ]
 }

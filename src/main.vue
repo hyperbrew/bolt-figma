@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+import {
+  dispatchTS,
+  getColorTheme,
+  listenTS,
+  subscribeColorTheme,
+} from "./utils/utils";
 
 // BOLT_SAMPLECODE_START
 import boltIconLight from "./assets/bolt-figma-lightmode.svg";
@@ -8,29 +14,31 @@ import viteIcon from "./assets/vite.svg";
 import vueIcon from "./assets/vue.svg";
 import typescriptIcon from "./assets/typescript.svg";
 import sassIcon from "./assets/sass.svg";
-import { getColorTheme, subscribeColorTheme } from "./utils/utils";
+
+let count = ref(0);
+
+const helloWorld = () => {
+  dispatchTS("hello", {
+    string: "World",
+    num: 20,
+  });
+
+  listenTS(
+    "helloCallback",
+    (res) => {
+      console.log("helloCallback result: ", res);
+    },
+    true,
+  );
+};
 // BOLT_SAMPLECODE_END
 
-const post = (msg: Message) => {
-  parent.postMessage({ pluginMessage: msg }, "*");
-};
-
-// BOLT_SAMPLECODE_START
-let count = ref(0);
 let lightOrDarkMode = ref(getColorTheme());
 onMounted(() => {
   subscribeColorTheme((mode) => {
     lightOrDarkMode.value = mode;
   });
 });
-
-const helloWorld = () => {
-  post({
-    func: "helloWorld",
-    callback: "",
-  });
-};
-// BOLT_SAMPLECODE_END
 </script>
 
 <template>

@@ -118,6 +118,78 @@ Write backend figma code in `src-code/code.ts`
 
 ---
 
+## Sending Messages between the Frontend and Backend
+
+Bolt Figma makes messaging between the frontend UI and backend code layers simple and type-safe. This can be done with `listenTS()` and `dispatchTS()`.
+
+Using this method accounts for:
+
+- Setting up a scoped event listener in the listening context
+- Removing the listener when the event is called (if `once` is set to true)
+- Ensuring End-to-End Type-Safety for the event
+
+### 1. Declare the Event Type in EventTS in shared/universals.ts
+
+```js
+export type EventTS = {
+  myCustomEvent: {
+    oneValue: string,
+    anotherValue: number,
+  },
+  // [... other events]
+};
+```
+
+### 2a. Send a Message from the Frontend to the Backend
+
+**Backend Listener:** `src-code/code.ts`
+
+```js
+import { listenTS } from "./utils/code-utils";
+
+listenTS("myCustomEvent", (data) => {
+  console.log("oneValue is", data.oneValue);
+  console.log("anotherValue is", data.anotherValue);
+});
+```
+
+**Frontend Dispatcher:** `index.svelte` or `index.tsx` or `index.vue`
+
+```js
+import { dispatchTS } from "./utils/utils";
+
+dispatchTS("myCustomEvent", { oneValue: "name", anotherValue: 20 });
+```
+
+### 2b. Send a Message from the Backend to the Frontend
+
+**Frontend Listener:** `index.svelte` or `index.tsx` or `index.vue`
+
+```js
+import { listenTS } from "./utils/utils";
+
+listenTS(
+  "myCustomEvent",
+  (data) => {
+    console.log("oneValue is", data.oneValue);
+    console.log("anotherValue is", data.anotherValue);
+  },
+  true,
+);
+```
+
+_Note: `true` is passed as the 3rd argument which means the listener will only listen once and then be removed. Set this to true to avoid duplicate events if you only intend to recieve one reponse per function._
+
+**Backend Dispatcher:** `src-code/code.ts`
+
+```js
+import { dispatchTS } from "./utils/code-utils";
+
+dispatchTS("myCustomEvent", { oneValue: "name", anotherValue: 20 });
+```
+
+---
+
 ### Info on Build Process
 
 Frontend code is built to the `.tmp` directory temporarily and then copied to the `dist` folder for final. This is done to avoid Figma throwing plugin errors with editing files directly in the `dist` folder.

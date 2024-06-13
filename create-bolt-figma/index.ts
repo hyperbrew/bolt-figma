@@ -47,6 +47,7 @@ const initData: BoltInitData = {
       "*",
       "src/**/*",
       "src-code/**/*",
+      "shared/**/*",
       "public/**/*",
       "public-zip/**/*",
       ".github/**/*",

@@ -1,11 +1,15 @@
-interface Message {
-  func: string;
+export type Message = {
+  event: string;
   data?: any;
   callback?: string;
+};
+
+export interface PluginMessageEvent {
+  pluginMessage: Message;
+  pluginId?: string;
 }
 
-interface PluginMessageEvent {
-  data: {
-    pluginMessage: Message;
-  };
-}
+declare module "*.png";
+declare module "*.gif";
+declare module "*.jpg";
+declare module "*.svg";

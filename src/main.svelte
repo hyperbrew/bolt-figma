@@ -1,4 +1,12 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+  import {
+    dispatchTS,
+    getColorTheme,
+    listenTS,
+    subscribeColorTheme,
+  } from "./utils/utils";
+
   // BOLT_SAMPLECODE_START
   import boltIconLight from "./assets/bolt-figma-lightmode.svg";
   import boltIconDark from "./assets/bolt-figma-darkmode.svg";
@@ -6,31 +14,32 @@
   import svelteIcon from "./assets/svelte.svg";
   import typescriptIcon from "./assets/typescript.svg";
   import sassIcon from "./assets/sass.svg";
-  import { getColorTheme, subscribeColorTheme } from "./utils/utils";
-  import { onMount } from "svelte";
-  // BOLT_SAMPLECODE_END
 
-  const post = (msg: Message) => {
-    parent.postMessage({ pluginMessage: msg }, "*");
-  };
-
-  // BOLT_SAMPLECODE_START
   let count: number = 0;
-  let lightOrDarkMode = getColorTheme();
   const increment = () => (count += 1);
 
   const helloWorld = () => {
-    post({
-      func: "helloWorld",
-      callback: "",
+    dispatchTS("hello", {
+      string: "World",
+      num: 20,
     });
+
+    listenTS(
+      "helloCallback",
+      (res) => {
+        console.log("helloCallback result: ", res);
+      },
+      true
+    );
   };
+  // BOLT_SAMPLECODE_END
+
+  let lightOrDarkMode = getColorTheme();
   onMount(() => {
     subscribeColorTheme((mode) => {
       lightOrDarkMode = mode;
     });
   });
-  // BOLT_SAMPLECODE_END
 </script>
 
 <main>
