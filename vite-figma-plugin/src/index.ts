@@ -22,25 +22,25 @@ export const figmaPluginInit = () => {
 
 export const figmaPlugin: (config: FigmaConfig, mode?: string) => Plugin = (
   config: FigmaConfig,
-  mode?: string
+  mode?: string,
 ) => ({
   name: "vite-figma-plugin",
   writeBundle() {
-    setTimeout(() => {
-      if (fs.existsSync(dist)) {
-        emptyFolder(dist);
-      } else {
-        fs.mkdirSync(dist, { recursive: true });
-      }
-      //* write manifest
-      fs.writeFileSync(
-        path.join(dist, "manifest.json"),
-        JSON.stringify(config.manifest, null, 2)
-      );
-      copyFilesRecursively(tmp, dist, () => {
-        triggerFigmaRefresh(path.join(dist, index));
-      });
-    }, 100);
+    // setTimeout(() => {
+    if (fs.existsSync(dist)) {
+      emptyFolder(dist);
+    } else {
+      fs.mkdirSync(dist, { recursive: true });
+    }
+    //* write manifest
+    fs.writeFileSync(
+      path.join(dist, "manifest.json"),
+      JSON.stringify(config.manifest, null, 2),
+    );
+    copyFilesRecursively(tmp, dist, () => {
+      triggerFigmaRefresh(path.join(dist, index));
+    });
+    // }, 100);
   },
   async closeBundle() {
     if (mode === "zip") {

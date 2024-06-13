@@ -31,7 +31,7 @@
     "sass": "^1.75.0",
     "typescript": "^5.0.2",
     "vite": "^5.2.12",
-    "vite-figma-plugin": "^0.0.20",
+    "vite-figma-plugin": "^0.0.24",
     "vite-plugin-singlefile": "^0.13.5"
   }
 }
