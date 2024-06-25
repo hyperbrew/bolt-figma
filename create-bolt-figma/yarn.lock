@@ -1075,10 +1075,10 @@ base64-js@^1.3.1:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-bolt-figma@^0.0.24:
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/bolt-figma/-/bolt-figma-0.0.24.tgz#307c88a17b31ef047b3ec7b3377df108b2ed23e3"
-  integrity sha512-V2MQRTl23A9bp5sKIqbo3plE7sF1nbpgvfHvfkbg71tRMeaLjo5Rr5/aFVRYDF+uWAs8ssyxiint+8wuoBHPvA==
+bolt-figma@^0.0.26:
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/bolt-figma/-/bolt-figma-0.0.26.tgz#70911c11acad5d99dfaf0ce4f10eea131bbe9311"
+  integrity sha512-I2R9h8SlmLj3ffNfUv8Ffy3pMq4OWVK2jLeR0E3Z5sXiC9nhcYZRsqrzvOu/ZgsnLGyLi/mPLI4zAxoM/sXr/A==
   dependencies:
     react "^18.3.1"
     react-dom "^18.3.1"
@@ -3084,6 +3084,11 @@ typescript@^4.9.5:
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
 
+typescript@^5.4.5:
+  version "5.4.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.5.tgz#42ccef2c571fdbd0f6718b1d1f5e6e5ef006f611"
+  integrity sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==
+
 undici-types@~5.26.4:
   version "5.26.5"
   resolved "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz"
@@ -3120,6 +3125,14 @@ v8-to-istanbul@^9.0.1:
     "@jridgewell/trace-mapping" "^0.3.12"
     "@types/istanbul-lib-coverage" "^2.0.1"
     convert-source-map "^2.0.0"
+
+vite-figma-plugin@^0.0.24:
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/vite-figma-plugin/-/vite-figma-plugin-0.0.24.tgz#26a2527530ac7bd9a70f8825bc21a9a81698c353"
+  integrity sha512-jLJhD86XsGF6oBPbg6ZYGIlWzP+FjMQ2/nr5V/fPbNGhuzqMQCpx2HI033sexuE+wIF0NOdfvQOKCMNgh+HGhA==
+  dependencies:
+    meta-bolt "^0.0.12"
+    typescript "^5.4.5"
 
 vue@^3.4.27:
   version "3.4.27"
