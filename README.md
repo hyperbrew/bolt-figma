@@ -52,6 +52,38 @@ If you have questions with getting started using Bolt Figma, feel free to ask an
 
 If your team is interested in paid consulting or development with Bolt Figma, please [contact the Hyper Brew team](https://hyperbrew.co/contact/). More info on our [Custom Plugin Development & Consulting Services](https://hyperbrew.co/landings/boost-development)
 
+## Can I use Bolt Figma in my free or commercial project?
+
+Yes! Bolt Figma is **100% free and open source**, being released under the MIT license with no attribution required. This means you are free to use it in your free or commercial projects.
+
+We would greatly appreciate it if you could provide a link back to this tool's info page in your product's site or about page:
+
+Bolt Figma Info Page Link: https://hyperbrew.co/resources/bolt-figma
+
+**Built with Bolt Figma** button graphics:
+
+**PNG Files**
+
+<div style="display:flex;gap:1rem;">
+<a href="./src/assets/built-with-bolt-figma/Built_With_BOLT_Figma_Logo_White_V01.png" target="_blank">
+<img src="./src/assets/built-with-bolt-figma/Built_With_BOLT_Figma_Logo_White_V01.png" width="200" /></a>
+
+<a href="./src/assets/built-with-bolt-figma/Built_With_BOLT_Figma_Logo_Black_V01.png" target="_blank">
+<img src="./src/assets/built-with-bolt-figma/Built_With_BOLT_Figma_Logo_Black_V01.png" width="200" /></a>
+
+</div>
+
+**SVG Files**
+
+<div style="display:flex;gap:1rem;">
+<a href="src/assets/built-with-bolt-figma/Built_With_BOLT_Figma_Logo_White_V01.svg" target="_blank">
+<img src="src/assets/built-with-bolt-figma/Built_With_BOLT_Figma_Logo_White_V01.svg" width="200" /></a>
+
+<a href="src/assets/built-with-bolt-figma/Built_With_BOLT_Figma_Logo_Black_V01.svg" target="_blank">
+<img src="src/assets/built-with-bolt-figma/Built_With_BOLT_Figma_Logo_Black_V01.svg" width="200" /></a>
+
+</div>
+
 ## Prerequisites
 
 - [Node.js 18](https://nodejs.org/en/) or later
