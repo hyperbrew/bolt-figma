@@ -12,6 +12,7 @@ export const manifest: PluginManifest = {
     "figjam", // BOLT_FIGJAM_ONLY
     "dev", // BOLT_FIGMADEV_ONLY
   ],
+  documentAccess: "dynamic-page",
   networkAccess: {
     allowedDomains: ["*"],
     reasoning: "For accessing remote assets",
