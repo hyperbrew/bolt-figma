@@ -232,6 +232,14 @@ The backend code is bundled into a single `code.js` file.
 
 Finally the `manifest.json` is generated from the `figma.config.ts` file with type-safety. This is configured when running `yarn create bolt-figma`, but you can make additional modifications to the `figma.config.ts` file after initialization.
 
+### Read if Dev or Production Mode
+
+Use the built-in Vite env var MODE to determine this:
+
+```js
+const mode = import.meta.env.MODE; // 'dev' or 'production'
+```
+
 ### Troubleshooting Assets
 
 Figma requires the entire frontend code to be wrapped into a single HTML file. For this reason, bundling external images, svgs, and other assets is not possible.

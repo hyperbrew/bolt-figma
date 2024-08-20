@@ -1,6 +1,6 @@
 {
   "name": "create-bolt-figma",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "license": "MIT",
   "bin": {
     "create-bolt-figma": "dist/index.js"
@@ -29,7 +29,7 @@
     "@clack/prompts": "^0.7.0",
     "@types/prettier": "^3.0.0",
     "@types/resolve-dir": "^0.0.0",
-    "bolt-figma": "^0.0.27",
+    "bolt-figma": "^0.0.28",
     "cross-env": "^7.0.3",
     "execa": "^5.1.1",
     "fast-glob": "^3.3.2",

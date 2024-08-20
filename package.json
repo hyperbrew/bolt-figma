@@ -1,6 +1,6 @@
 {
   "name": "bolt-figma",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "repository": {
     "type": "git",
     "url": "https://github.com/hyperbrew/bolt-figma.git"
@@ -8,8 +8,8 @@
   "homepage": "https://github.com/hyperbrew/bolt-figma",
   "type": "module",
   "scripts": {
-    "dev": "vite build --watch",
-    "devcode": "vite build --watch --config vite.config.code.ts ",
+    "dev": "vite build --watch --mode dev",
+    "devcode": "vite build --watch --mode dev --config vite.config.code.ts ",
     "build": "vite build",
     "buildcode": "vite build --config vite.config.code.ts",
     "preview": "vite preview",
