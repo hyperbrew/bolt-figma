@@ -61,6 +61,7 @@ const initData: BoltInitData = {
       ["package.svelte.jsonc", "package.json"],
       ["package.react.jsonc", "package.json"],
       ["package.vue.jsonc", "package.json"],
+      [".npmignore", ".gitignore"],
     ],
   },
   argsTemplate: [
