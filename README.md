@@ -98,7 +98,7 @@ Bolt Figma Info Page Link: https://hyperbrew.co/resources/bolt-figma
 Create your new Bolt Figma project (follow CLI prompts)
 
 - yarn - `yarn create bolt-figma`
-- npm - `npx create bolt-figma`
+- npm - `npx create-bolt-figma`
 - pnpm - `pnpm create bolt-figma`
 
 Change directory to the new project
