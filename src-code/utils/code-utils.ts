@@ -1,6 +1,9 @@
 import type { Message, PluginMessageEvent } from "../../src/globals";
 import type { EventTS } from "../../shared/universals";
 
+// Re-export type guards for convenient access
+export * from "./type-guards";
+
 export const dispatch = (data: any, origin = "*") => {
   figma.ui.postMessage(data, {
     origin,
